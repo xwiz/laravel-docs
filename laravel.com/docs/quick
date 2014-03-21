@@ -1,0 +1,411 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>Laravel Quickstart</h1>
+
+<ul>
+<li><a href="quick#installation">Installation</a></li>
+<li><a href="quick#routing">Routing</a></li>
+<li><a href="quick#creating-a-view">Creating A View</a></li>
+<li><a href="quick#creating-a-migration">Creating A Migration</a></li>
+<li><a href="quick#eloquent-orm">Eloquent ORM</a></li>
+<li><a href="quick#displaying-data">Displaying Data</a></li>
+</ul>
+
+<p><a name="installation"></a></p>
+
+<h2>Installation</h2>
+
+<p>The Laravel framework utilizes <a href="http://getcomposer.org">Composer</a> for installation and dependency management. If you haven't already, start by <a href="http://getcomposer.org/doc/00-intro.md">installing Composer</a>.</p>
+
+<p>Now you can install Laravel by issuing the following command from your terminal:</p>
+
+<pre><code>composer create-project laravel/laravel your-project-name --prefer-dist
+</code></pre>
+
+<p>This command will download and install a fresh copy of Laravel in a new <code>your-project-name</code> folder within your current directory.</p>
+
+<p>If you prefer, you can alternatively download a copy of the <a href="https://github.com/laravel/laravel/archive/master.zip">Laravel repository from Github</a> manually. Next run the <code>composer install</code> command in the root of your manually created project directory. This command will download and install the framework's dependencies.</p>
+
+<p><a name="permissions"></a></p>
+
+<h3>Permissions</h3>
+
+<p>After installing Laravel, you may need to grant the web server write permissions to the <code>app/storage</code> directories. See the <a href="installation">Installation</a> documentation for more details on configuration.</p>
+
+<p><a name="directories"></a></p>
+
+<h3>Directory Structure</h3>
+
+<p>After installing the framework, take a glance around the project to familiarize yourself with the directory structure. The <code>app</code> directory contains folders such as <code>views</code>, <code>controllers</code>, and <code>models</code>. Most of your application's code will reside somewhere in this directory. You may also wish to explore the <code>app/config</code> directory and the configuration options that are available to you.</p>
+
+<p><a name="routing"></a></p>
+
+<h2>Routing</h2>
+
+<p>To get started, let's create our first route. In Laravel, the simplest route is a route to a Closure. Pop open the <code>app/routes.php</code> file and add the following route to the bottom of the file:</p>
+
+<pre><code>Route::get('users', function()
+{
+    return 'Users!';
+});
+</code></pre>
+
+<p>Now, if you hit the <code>/users</code> route in your web browser, you should see <code>Users!</code> displayed as the response. Great! You've just created your first route.</p>
+
+<p>Routes can also be attached to controller classes. For example:</p>
+
+<pre><code>Route::get('users', 'UserController@getIndex');
+</code></pre>
+
+<p>This route informs the framework that requests to the <code>/users</code> route should call the <code>getIndex</code> method on the <code>UserController</code> class. For more information on controller routing, check out the <a href="controllers">controller documentation</a>.</p>
+
+<p><a name="creating-a-view"></a></p>
+
+<h2>Creating A View</h2>
+
+<p>Next, we'll create a simple view to display our user data. Views live in the <code>app/views</code> directory and contain the HTML of your application. We're going to place two new views in this directory: <code>layout.blade.php</code> and <code>users.blade.php</code>. First, let's create our <code>layout.blade.php</code> file:</p>
+
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Laravel Quickstart&lt;/h1&gt;
+
+        @yield('content')
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Next, we'll create our <code>users.blade.php</code> view:</p>
+
+<pre><code>@extends('layout')
+
+@section('content')
+    Users!
+@stop
+</code></pre>
+
+<p>Some of this syntax probably looks quite strange to you. That's because we're using Laravel's templating system: Blade. Blade is very fast, because it is simply a handful of regular expressions that are run against your templates to compile them to pure PHP. Blade provides powerful functionality like template inheritance, as well as some syntax sugar on typical PHP control structures such as <code>if</code> and <code>for</code>. Check out the <a href="templates">Blade documentation</a> for more details.</p>
+
+<p>Now that we have our views, let's return it from our <code>/users</code> route. Instead of returning <code>Users!</code> from the route, return the view instead:</p>
+
+<pre><code>Route::get('users', function()
+{
+    return View::make('users');
+});
+</code></pre>
+
+<p>Wonderful! Now you have setup a simple view that extends a layout. Next, let's start working on our database layer.</p>
+
+<p><a name="creating-a-migration"></a></p>
+
+<h2>Creating A Migration</h2>
+
+<p>To create a table to hold our data, we'll use the Laravel migration system. Migrations let you expressively define modifications to your database, and easily share them with the rest of your team.</p>
+
+<p>First, let's configure a database connection. You may configure all of your database connections from the <code>app/config/database.php</code> file. By default, Laravel is configured to use MySQL, and you will need to supply connection credentials within the database configuration file. If you wish, you may change the <code>driver</code> option to <code>sqlite</code> and it will use the SQLite database included in the <code>app/database</code> directory.</p>
+
+<p>Next, to create the migration, we'll use the <a href="artisan">Artisan CLI</a>. From the root of your project, run the following from your terminal:</p>
+
+<pre><code>php artisan migrate:make create_users_table
+</code></pre>
+
+<p>Next, find the generated migration file in the <code>app/database/migrations</code> folder. This file contains a class with two methods: <code>up</code> and <code>down</code>. In the <code>up</code> method, you should make the desired changes to your database tables, and in the <code>down</code> method you simply reverse them.</p>
+
+<p>Let's define a migration that looks like this:</p>
+
+<pre><code>public function up()
+{
+    Schema::create('users', function($table)
+    {
+        $table-&gt;increments('id');
+        $table-&gt;string('email')-&gt;unique();
+        $table-&gt;string('name');
+        $table-&gt;timestamps();
+    });
+}
+
+public function down()
+{
+    Schema::drop('users');
+}
+</code></pre>
+
+<p>Next, we can run our migrations from our terminal using the <code>migrate</code> command. Simply execute this command from the root of your project:</p>
+
+<pre><code>php artisan migrate
+</code></pre>
+
+<p>If you wish to rollback a migration, you may issue the <code>migrate:rollback</code> command. Now that we have a database table, let's start pulling some data!</p>
+
+<p><a name="eloquent-orm"></a></p>
+
+<h2>Eloquent ORM</h2>
+
+<p>Laravel ships with a superb ORM: Eloquent. If you have used the Ruby on Rails framework, you will find Eloquent familiar, as it follows the ActiveRecord ORM style of database interaction.</p>
+
+<p>First, let's define a model. An Eloquent model can be used to query an associated database table, as well as represent a given row within that table. Don't worry, it will all make sense soon! Models are typically stored in the <code>app/models</code> directory. Let's define a <code>User.php</code> model in that directory like so:</p>
+
+<pre><code>class User extends Eloquent {}
+</code></pre>
+
+<p>Note that we do not have to tell Eloquent which table to use. Eloquent has a variety of conventions, one of which is to use the plural form of the model name as the model's database table. Convenient!</p>
+
+<p>Using your preferred database administration tool, insert a few rows into your <code>users</code> table, and we'll use Eloquent to retrieve them and pass them to our view.</p>
+
+<p>Now let's modify our <code>/users</code> route to look like this:</p>
+
+<pre><code>Route::get('users', function()
+{
+    $users = User::all();
+
+    return View::make('users')-&gt;with('users', $users);
+});
+</code></pre>
+
+<p>Let's walk through this route. First, the <code>all</code> method on the <code>User</code> model will retrieve all of the rows in the <code>users</code> table. Next, we're passing these records to the view via the <code>with</code> method. The <code>with</code> method accepts a key and a value, and is used to make a piece of data available to a view.</p>
+
+<p>Awesome. Now we're ready to display the users in our view!</p>
+
+<p><a name="displaying-data"></a></p>
+
+<h2>Displaying Data</h2>
+
+<p>Now that we have made the <code>users</code> available to our view. We can display them like so:</p>
+
+<pre><code>@extends('layout')
+
+@section('content')
+    @foreach($users as $user)
+        &lt;p&gt;{{ $user-&gt;name }}&lt;/p&gt;
+    @endforeach
+@stop
+</code></pre>
+
+<p>You may be wondering where to find our <code>echo</code> statements. When using Blade, you may echo data by surrounding it with double curly braces. It's a cinch. Now, you should be able to hit the <code>/users</code> route and see the names of your users displayed in the response.</p>
+
+<p>This is just the beginning. In this tutorial, you've seen the very basics of Laravel, but there are so many more exciting things to learn. Keep reading through the documentation and dig deeper into the powerful features available to you in <a href="eloquent">Eloquent</a> and <a href="templates">Blade</a>. Or, maybe you're more interested in <a href="queues">Queues</a> and <a href="testing">Unit Testing</a>. Then again, maybe you want to flex your architecture muscles with the <a href="ioc">IoC Container</a>. The choice is yours!</p>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="quick#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>

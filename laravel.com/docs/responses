@@ -1,0 +1,452 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>Views &amp; Responses</h1>
+
+<ul>
+<li><a href="responses#basic-responses">Basic Responses</a></li>
+<li><a href="responses#redirects">Redirects</a></li>
+<li><a href="responses#views">Views</a></li>
+<li><a href="responses#view-composers">View Composers</a></li>
+<li><a href="responses#special-responses">Special Responses</a></li>
+</ul>
+
+<p><a name="basic-responses"></a></p>
+
+<h2>Basic Responses</h2>
+
+<p><strong>Returning Strings From Routes</strong></p>
+
+<pre><code>Route::get('/', function()
+{
+    return 'Hello World';
+});
+</code></pre>
+
+<p><strong>Creating Custom Responses</strong></p>
+
+<p>A <code>Response</code> instance inherits from the <code>Symfony\Component\HttpFoundation\Response</code> class, providing a variety of methods for building HTTP responses.</p>
+
+<pre><code>$response = Response::make($contents, $statusCode);
+
+$response-&gt;header('Content-Type', $value);
+
+return $response;
+</code></pre>
+
+<p><strong>Attaching Cookies To Responses</strong></p>
+
+<pre><code>$cookie = Cookie::make('name', 'value');
+
+return Response::make($content)-&gt;withCookie($cookie);
+</code></pre>
+
+<p><a name="redirects"></a></p>
+
+<h2>Redirects</h2>
+
+<p><strong>Returning A Redirect</strong></p>
+
+<pre><code>return Redirect::to('user/login');
+</code></pre>
+
+<p><strong>Returning A Redirect With Flash Data</strong></p>
+
+<pre><code>return Redirect::to('user/login')-&gt;with('message', 'Login Failed');
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong> Since the <code>with</code> method flashes data to the session, you may retrieve the data using the typical <code>Session::get</code> method.</p>
+</blockquote>
+
+<p><strong>Returning A Redirect To A Named Route</strong></p>
+
+<pre><code>return Redirect::route('login');
+</code></pre>
+
+<p><strong>Returning A Redirect To A Named Route With Parameters</strong></p>
+
+<pre><code>return Redirect::route('profile', array(1));
+</code></pre>
+
+<p><strong>Returning A Redirect To A Named Route Using Named Parameters</strong></p>
+
+<pre><code>return Redirect::route('profile', array('user' =&gt; 1));
+</code></pre>
+
+<p><strong>Returning A Redirect To A Controller Action</strong></p>
+
+<pre><code>return Redirect::action('HomeController@index');
+</code></pre>
+
+<p><strong>Returning A Redirect To A Controller Action With Parameters</strong></p>
+
+<pre><code>return Redirect::action('UserController@profile', array(1));
+</code></pre>
+
+<p><strong>Returning A Redirect To A Controller Action Using Named Parameters</strong></p>
+
+<pre><code>return Redirect::action('UserController@profile', array('user' =&gt; 1));
+</code></pre>
+
+<p><a name="views"></a></p>
+
+<h2>Views</h2>
+
+<p>Views typically contain the HTML of your application and provide a convenient way of separating your controller and domain logic from your presentation logic. Views are stored in the <code>app/views</code> directory.</p>
+
+<p>A simple view could look something like this:</p>
+
+<pre><code>&lt;!-- View stored in app/views/greeting.php --&gt;
+
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>This view may be returned to the browser like so:</p>
+
+<pre><code>Route::get('/', function()
+{
+    return View::make('greeting', array('name' =&gt; 'Taylor'));
+});
+</code></pre>
+
+<p>The second argument passed to <code>View::make</code> is an array of data that should be made available to the view.</p>
+
+<p><strong>Passing Data To Views</strong></p>
+
+<pre><code>$view = View::make('greeting')-&gt;with('name', 'Steve');
+</code></pre>
+
+<p>In the example above the variable <code>$name</code> would be accessible from the view, and would contain <code>Steve</code>.</p>
+
+<p>If you wish, you may pass an array of data as the second parameter given to the <code>make</code> method:</p>
+
+<pre><code>$view = View::make('greetings', $data);
+</code></pre>
+
+<p>You may also share a piece of data across all views:</p>
+
+<pre><code>View::share('name', 'Steve');
+</code></pre>
+
+<p><strong>Passing A Sub-View To A View</strong></p>
+
+<p>Sometimes you may wish to pass a view into another view. For example, given a sub-view stored at <code>app/views/child/view.php</code>, we could pass it to another view like so:</p>
+
+<pre><code>$view = View::make('greeting')-&gt;nest('child', 'child.view');
+
+$view = View::make('greeting')-&gt;nest('child', 'child.view', $data);
+</code></pre>
+
+<p>The sub-view can then be rendered from the parent view:</p>
+
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello!&lt;/h1&gt;
+        &lt;?php echo $child; ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><a name="view-composers"></a></p>
+
+<h2>View Composers</h2>
+
+<p>View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want bound to a given view each time that view is rendered throughout your application, a view composer can organize that code into a single location. Therefore, view composers may function like "view models" or "presenters".</p>
+
+<p><strong>Defining A View Composer</strong></p>
+
+<pre><code>View::composer('profile', function($view)
+{
+    $view-&gt;with('count', User::count());
+});
+</code></pre>
+
+<p>Now each time the <code>profile</code> view is rendered, the <code>count</code> data will be bound to the view.</p>
+
+<p>You may also attach a view composer to multiple views at once:</p>
+
+<pre><code>View::composer(array('profile','dashboard'), function($view)
+{
+    $view-&gt;with('count', User::count());
+});
+</code></pre>
+
+<p>If you would rather use a class based composer, which will provide the benefits of being resolved through the application <a href="ioc">IoC Container</a>, you may do so:</p>
+
+<pre><code>View::composer('profile', 'ProfileComposer');
+</code></pre>
+
+<p>A view composer class should be defined like so:</p>
+
+<pre><code>class ProfileComposer {
+
+    public function compose($view)
+    {
+        $view-&gt;with('count', User::count());
+    }
+
+}
+</code></pre>
+
+<p>Note that there is no convention on where composer classes may be stored. You are free to store them anywhere as long as they can be autoloaded using the directives in your <code>composer.json</code> file.</p>
+
+<h3>View Creators</h3>
+
+<p>View <strong>creators</strong> work almost exactly like view composers; however, they are fired immediately when the view is instantiated. To register a view creator, simple use the <code>creator</code> method:</p>
+
+<pre><code>View::creator('profile', function($view)
+{
+    $view-&gt;with('count', User::count());
+});
+</code></pre>
+
+<p><a name="special-responses"></a></p>
+
+<h2>Special Responses</h2>
+
+<p><strong>Creating A JSON Response</strong></p>
+
+<pre><code>return Response::json(array('name' =&gt; 'Steve', 'state' =&gt; 'CA'));
+</code></pre>
+
+<p><strong>Creating A JSONP Response</strong></p>
+
+<pre><code>return Response::json(array('name' =&gt; 'Steve', 'state' =&gt; 'CA'))-&gt;setCallback(Input::get('callback'));
+</code></pre>
+
+<p><strong>Creating A File Download Response</strong></p>
+
+<pre><code>return Response::download($pathToFile);
+
+return Response::download($pathToFile, $name, $headers);
+</code></pre>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="responses#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>

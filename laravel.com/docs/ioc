@@ -1,0 +1,426 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>IoC Container</h1>
+
+<ul>
+<li><a href="ioc#introduction">Introduction</a></li>
+<li><a href="ioc#basic-usage">Basic Usage</a></li>
+<li><a href="ioc#automatic-resolution">Automatic Resolution</a></li>
+<li><a href="ioc#practical-usage">Practical Usage</a></li>
+<li><a href="ioc#service-providers">Service Providers</a></li>
+<li><a href="ioc#container-events">Container Events</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2>Introduction</h2>
+
+<p>The Laravel inversion of control container is a powerful tool for managing class dependencies. Dependency injection is a method of removing hard-coded class dependencies. Instead, the dependencies are injected at run-time, allowing for greater flexibility as dependency implementations may be swapped easily.</p>
+
+<p>Understanding the Laravel IoC container is essential to building a powerful, large application, as well as for contributing to the Laravel core itself.</p>
+
+<p><a name="basic-usage"></a></p>
+
+<h2>Basic Usage</h2>
+
+<p>There are two ways the IoC container can resolve dependencies: via Closure callbacks or automatic resolution. First, we'll explore Closure callbacks. First, a "type" may be bound into the container:</p>
+
+<p><strong>Binding A Type Into The Container</strong></p>
+
+<pre><code>App::bind('foo', function($app)
+{
+    return new FooBar;
+});
+</code></pre>
+
+<p><strong>Resolving A Type From The Container</strong></p>
+
+<pre><code>$value = App::make('foo');
+</code></pre>
+
+<p>When the <code>App::make</code> method is called, the Closure callback is executed and the result is returned.</p>
+
+<p>Sometimes, you may wish to bind something into the container that should only be resolved once, and the same instance should be returned on subsequent calls into the container:</p>
+
+<p><strong>Binding A "Shared" Type Into The Container</strong></p>
+
+<pre><code>App::singleton('foo', function()
+{
+    return new FooBar;
+});
+</code></pre>
+
+<p>You may also bind an existing object instance into the container using the <code>instance</code> method:</p>
+
+<p><strong>Binding An Existing Instance Into The Container</strong></p>
+
+<pre><code>$foo = new Foo;
+
+App::instance('foo', $foo);
+</code></pre>
+
+<p><a name="automatic-resolution"></a></p>
+
+<h2>Automatic Resolution</h2>
+
+<p>The IoC container is powerful enough to resolve classes without any configuration at all in many scenarios. For example:</p>
+
+<p><strong>Resolving A Class</strong></p>
+
+<pre><code>class FooBar {
+
+    public function __construct(Baz $baz)
+    {
+        $this-&gt;baz = $baz;
+    }
+
+}
+
+$fooBar = App::make('FooBar');
+</code></pre>
+
+<p>Note that even though we did not register the FooBar class in the container, the container will still be able to resolve the class, even injecting the <code>Baz</code> dependency automatically!</p>
+
+<p>When a type is not bound in the container, it will use PHP's Reflection facilities to inspect the class and read the constructor's type-hints. Using this information, the container can automatically build an instance of the class.</p>
+
+<p>However, in some cases, a class may depend on an interface implementation, not a "concrete type". When this is the case, the <code>App::bind</code> method must be used to inform the container which interface implementation to inject:</p>
+
+<p><strong>Binding An Interface To An Implementation</strong></p>
+
+<pre><code>App::bind('UserRepositoryInterface', 'DbUserRepository');
+</code></pre>
+
+<p>Now consider the following controller:</p>
+
+<pre><code>class UserController extends BaseController {
+
+    public function __construct(UserRepositoryInterface $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+}
+</code></pre>
+
+<p>Since we have bound the <code>UserRepositoryInterface</code> to a concrete type, the <code>DbUserRepository</code> will automatically be injected into this controller when it is created.</p>
+
+<p><a name="practical-usage"></a></p>
+
+<h2>Practical Usage</h2>
+
+<p>Laravel provides several opportunities to use the IoC container to increase the flexibility and testability of your application. One primary example is when resolving controllers. All controllers are resolved through the IoC container, meaning you can type-hint dependencies in a controller constructor, and they will automatically be injected.</p>
+
+<p><strong>Type-Hinting Controller Dependencies</strong></p>
+
+<pre><code>class OrderController extends BaseController {
+
+    public function __construct(OrderRepository $orders)
+    {
+        $this-&gt;orders = $orders;
+    }
+
+    public function getIndex()
+    {
+        $all = $this-&gt;orders-&gt;all();
+
+        return View::make('orders', compact('all'));
+    }
+
+}
+</code></pre>
+
+<p>In this example, the <code>OrderRepository</code> class will automatically be injected into the controller. This means that when <a href="testing">unit testing</a> a "mock" <code>OrderRepository</code> may be bound into the container and injected into the controller, allowing for painless stubbing of database layer interaction.</p>
+
+<p><a href="routing#route-filters">Filters</a>, <a href="responses#view-composers">composers</a>, and <a href="events#using-classes-as-listeners">event handlers</a> may also be resolved out of the IoC container. When registering them, simply give the name of the class that should be used:</p>
+
+<p><strong>Other Examples Of IoC Usage</strong></p>
+
+<pre><code>Route::filter('foo', 'FooFilter');
+
+View::composer('foo', 'FooComposer');
+
+Event::listen('foo', 'FooHandler');
+</code></pre>
+
+<p><a name="service-providers"></a></p>
+
+<h2>Service Providers</h2>
+
+<p>Service providers are a great way to group related IoC registrations in a single location. Think of them as a way to bootstrap components in your application. Within a service provider, you might register a custom authentication driver, register your application's repository classes with the IoC container, or even setup a custom Artisan command.</p>
+
+<p>In fact, most of the core Laravel components include service providers. All of the registered service providers for your application are listed in the <code>providers</code> array of the <code>app/config/app.php</code> configuration file.</p>
+
+<p>To create a service provider, simply extend the <code>Illuminate\Support\ServiceProvider</code> class and define a <code>register</code> method:</p>
+
+<p><strong>Defining A Service Provider</strong></p>
+
+<pre><code>use Illuminate\Support\ServiceProvider;
+
+class FooServiceProvider extends ServiceProvider {
+
+    public function register()
+    {
+        $this-&gt;app-&gt;bind('foo', function()
+        {
+            return new Foo;
+        });
+    }
+
+}
+</code></pre>
+
+<p>Note that in the <code>register</code> method, the application IoC container is available to you via the <code>$this-&gt;app</code> property. Once you have created a provider and are ready to register it with your application, simply add it to the <code>providers</code> array in your <code>app</code> configuration file.</p>
+
+<p>You may also register a service provider at run-time using the <code>App::register</code> method:</p>
+
+<p><strong>Registering A Service Provider At Run-Time</strong></p>
+
+<pre><code>App::register('FooServiceProvider');
+</code></pre>
+
+<p><a name="container-events"></a></p>
+
+<h2>Container Events</h2>
+
+<p>The container fires an event each time it resolves an object. You may listen to this event using the <code>resolving</code> method:</p>
+
+<p><strong>Registering A Resolving Listener</strong></p>
+
+<pre><code>App::resolvingAny(function($object)
+{
+    //
+});
+
+App::resolving('foo', function($foo)
+{
+    //
+});
+</code></pre>
+
+<p>Note that the object that was resolved will be passed to the callback.</p>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="ioc#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>

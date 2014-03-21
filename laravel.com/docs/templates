@@ -1,0 +1,396 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>Templates</h1>
+
+<ul>
+<li><a href="templates#controller-layouts">Controller Layouts</a></li>
+<li><a href="templates#blade-templating">Blade Templating</a></li>
+<li><a href="templates#other-blade-control-structures">Other Blade Control Structures</a></li>
+</ul>
+
+<p><a name="controller-layouts"></a></p>
+
+<h2>Controller Layouts</h2>
+
+<p>One method of using templates in Laravel is via controller layouts. By specifying the <code>layout</code> property on the controller, the view specified will be created for you and will be the assumed response that should be returned from actions.</p>
+
+<p><strong>Defining A Layout On A Controller</strong></p>
+
+<pre><code>class UserController extends BaseController {
+
+    /**
+     * The layout that should be used for responses.
+     */
+    protected $layout = 'layouts.master';
+
+    /**
+     * Show the user profile.
+     */
+    public function showProfile()
+    {
+        $this-&gt;layout-&gt;content = View::make('user.profile');
+    }
+
+}
+</code></pre>
+
+<p><a name="blade-templating"></a></p>
+
+<h2>Blade Templating</h2>
+
+<p>Blade is a simple, yet powerful templating engine provided with Laravel. Unlike controller layouts, Blade is driven by <em>template inheritance</em> and <em>sections</em>. All Blade templates should use the <code>.blade.php</code> extension.</p>
+
+<p><strong>Defining A Blade Layout</strong></p>
+
+<pre><code>&lt;!-- Stored in app/views/layouts/master.blade.php --&gt;
+
+&lt;html&gt;
+    &lt;body&gt;
+        @section('sidebar')
+            This is the master sidebar.
+        @show
+
+        &lt;div class="container"&gt;
+            @yield('content')
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p><strong>Using A Blade Layout</strong></p>
+
+<pre><code>@extends('layouts.master')
+
+@section('sidebar')
+    @parent
+
+    &lt;p&gt;This is appended to the master sidebar.&lt;/p&gt;
+@stop
+
+@section('content')
+    &lt;p&gt;This is my body content.&lt;/p&gt;
+@stop
+</code></pre>
+
+<p>Note that views which <code>extend</code> a Blade layout simply override sections from the layout. Content of the layout can be included in a child view using the <code>@parent</code> directive in a section, allowing you to append to the contents of a layout section such as a sidebar or footer.</p>
+
+<p>Sometimes, such as when you are not sure if a section has been defined, you may wish to pass a default value to the <code>@yield</code> directive. You may pass the default value as the second argument:</p>
+
+<pre><code>@yield('section', 'Default Content');
+</code></pre>
+
+<p><a name="other-blade-control-structures"></a></p>
+
+<h2>Other Blade Control Structures</h2>
+
+<p><strong>Echoing Data</strong></p>
+
+<pre><code>Hello, {{ $name }}.
+
+The current UNIX timestamp is {{ time() }}.
+</code></pre>
+
+<p>If you need to display a string that is wrapped in curly braces, you may escape the Blade behavior by prefixing your text with an <code>@</code> symbol:</p>
+
+<p><strong>Displaying Raw Text With Curly Braces</strong></p>
+
+<pre><code>@{{ This will not be processed by Blade }}
+</code></pre>
+
+<p>Of course, all user supplied data should be escaped or purified. To escape the output, you may use the triple curly brace syntax:</p>
+
+<pre><code>Hello, {{{ $name }}}.
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong> Be very careful when echoing content that is supplied by users of your application. Always use the triple curly brace syntax to escape any HTML entities in the content.</p>
+</blockquote>
+
+<p><strong>If Statements</strong></p>
+
+<pre><code>@if (count($records) === 1)
+    I have one record!
+@elseif (count($records) &gt; 1)
+    I have multiple records!
+@else
+    I don't have any records!
+@endif
+
+@unless (Auth::check())
+    You are not signed in.
+@endunless
+</code></pre>
+
+<p><strong>Loops</strong></p>
+
+<pre><code>@for ($i = 0; $i &lt; 10; $i++)
+    The current value is {{ $i }}
+@endfor
+
+@foreach ($users as $user)
+    &lt;p&gt;This is user {{ $user-&gt;id }}&lt;/p&gt;
+@endforeach
+
+@while (true)
+    &lt;p&gt;I'm looping forever.&lt;/p&gt;
+@endwhile
+</code></pre>
+
+<p><strong>Including Sub-Views</strong></p>
+
+<pre><code>@include('view.name')
+</code></pre>
+
+<p>You may also pass an array of data to the included view:</p>
+
+<pre><code>@include('view.name', array('some'=&gt;'data'))
+</code></pre>
+
+<p><strong>Overwriting Sections</strong></p>
+
+<p>By default, sections are appended to any previous content that exists in the section. To overwrite a section entirely, you may use the <code>overwrite</code> statement:</p>
+
+<pre><code>@extends('list.item.container')
+
+@section('list.item.content')
+    &lt;p&gt;This is an item of type {{ $item-&gt;type }}&lt;/p&gt;
+@overwrite
+</code></pre>
+
+<p><strong>Displaying Language Lines</strong></p>
+
+<pre><code>@lang('language.line')
+
+@choice('language.line', 1);
+</code></pre>
+
+<p><strong>Comments</strong></p>
+
+<pre><code>{{-- This comment will not be in the rendered HTML --}}
+</code></pre>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="templates#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>

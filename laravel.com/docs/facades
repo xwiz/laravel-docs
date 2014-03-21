@@ -1,0 +1,351 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>Facades</h1>
+
+<ul>
+<li><a href="facades#introduction">Introduction</a></li>
+<li><a href="facades#explanation">Explanation</a></li>
+<li><a href="facades#practical-usage">Practical Usage</a></li>
+<li><a href="facades#creating-facades">Creating Facades</a></li>
+<li><a href="facades#mocking-facades">Mocking Facades</a></li>
+</ul>
+
+<p><a name="introduction"></a></p>
+
+<h2>Introduction</h2>
+
+<p>Facades provide a "static" interface to classes that are available in the application's <a href="ioc">IoC container</a>. Laravel ships with many facades, and you have probably been using them without even knowing it!</p>
+
+<p>Occasionally, You may wish to create your own facades for your applications and packages, so let's explore the concept, development and usage of these classes.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Before digging into facades, it is strongly recommended that you become very familiar with the Laravel <a href="ioc">IoC container</a>.</p>
+</blockquote>
+
+<p><a name="explanation"></a></p>
+
+<h2>Explanation</h2>
+
+<p>In the context of a Laravel application, a facade is a class that provides access to an object from the container. The machinery that makes this work is in the <code>Facade</code> class. Laravel's facades, and any custom facades you create, will extend the base <code>Facade</code> class.</p>
+
+<p>Your facade class only needs to implement a single method: <code>getFacadeAccessor</code>. It's the <code>getFacadeAccessor</code> method's job to define what to resolve from the container. The <code>Facade</code> base class makes use of the <code>__callStatic()</code> magic-method to defer calls from your facade to the resolved object.</p>
+
+<p><a name="practical-usage"></a></p>
+
+<h2>Practical Usage</h2>
+
+<p>In the example below, a call is made to the Laravel cache system. By glancing at this code, one might assume that the static method <code>get</code> is being called on the <code>Cache</code> class.</p>
+
+<pre><code>$value = Cache::get('key');
+</code></pre>
+
+<p>However, if we look at that <code>Illuminate\Support\Facades\Cache</code> class, you'll see that there is no static method <code>get</code>:</p>
+
+<pre><code>class Cache extends Facade {
+
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor() { return 'cache'; }
+
+}
+</code></pre>
+
+<p>The Cache class extends the base <code>Facade</code> class and defines a method <code>getFacadeAccessor()</code>. Remember, this method's job is to return the name of an IoC binding.</p>
+
+<p>When a user references any static method on the <code>Cache</code> facade, Laravel resolves the <code>cache</code> binding from the IoC container and runs the requested method (in this case, <code>get</code>) against that object.</p>
+
+<p>So, our <code>Cache::get</code> call could be re-written like so:</p>
+
+<pre><code>$value = $app-&gt;make('cache')-&gt;get('key');
+</code></pre>
+
+<p><a name="creating-facades"></a></p>
+
+<h2>Creating Facades</h2>
+
+<p>Creating a facade for your own application or package is simple. You only need 3 things:</p>
+
+<ul>
+<li>An IoC binding</li>
+<li>A facade class.</li>
+<li>A facade alias configuration.</li>
+</ul>
+
+<p>Let's look at an example. Here, we have a class defined as <code>PaymentGateway\Payment</code>.</p>
+
+<pre><code>namespace PaymentGateway;
+
+class Payment {
+
+    public function process()
+    {
+        //
+    }
+
+}
+</code></pre>
+
+<p>We need to be able to resolve this class from the IoC container. So, let's add a binding:</p>
+
+<pre><code>App::bind('payment', function()
+{
+    return new \PaymentGateway\Payment;
+});
+</code></pre>
+
+<p>A great place to register this binding would be to create a new <a href="ioc#service-providers">service provider</a> named <code>PaymentServiceProvider</code>, and add this binding to the <code>register</code> method. You can then configure Laravel to load your service provider from the <code>app/config/app.php</code> configuration file.</p>
+
+<p>Next, we can create our own facade class:</p>
+
+<pre><code>use Illuminate\Support\Facades\Facade;
+
+class Payment extends Facade {
+
+    protected static function getFacadeAccessor() { return 'payment'; }
+
+}
+</code></pre>
+
+<p>Finally, if we wish, we can add an alias for our facade to the <code>aliases</code> array in the <code>app/config/app.php</code> configuration file. Now, we can call the <code>process</code> method on an instance of the <code>Payment</code> class.</p>
+
+<pre><code>Payment::process();
+</code></pre>
+
+<h3>A Note On Auto-Loading Aliases</h3>
+
+<p>Classes in the <code>aliases</code> array are not available in some instances because <a href="https://bugs.php.net/bug.php?id=39003">PHP will not attempt to autoload undefined type-hinted classes</a>. If <code>\ServiceWrapper\ApiTimeoutException</code> is aliased to <code>ApiTimeoutException</code>, a <code>catch(ApiTimeoutException $e)</code> outside of the namespace <code>\ServiceWrapper</code> will never catch the exception, even if one is thrown. A similar problem is found in Models which have type hints to aliased classes. The only workaround is to forego aliasing and <code>use</code> the classes you wish to type hint at the top of each file which requires them.</p>
+
+<p><a name="mocking-facades"></a></p>
+
+<h2>Mocking Facades</h2>
+
+<p>Unit testing is an important aspect of why facades work the way that they do. In fact, testability is the primary reason for facades to even exist. For more information, check out the <a href="testing#mocking-facades">mocking facades</a> section of the documentation.</p>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="facades#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>

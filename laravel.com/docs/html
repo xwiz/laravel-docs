@@ -1,0 +1,472 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>Forms &amp; HTML</h1>
+
+<ul>
+<li><a href="html#opening-a-form">Opening A Form</a></li>
+<li><a href="html#csrf-protection">CSRF Protection</a></li>
+<li><a href="html#form-model-binding">Form Model Binding</a></li>
+<li><a href="html#labels">Labels</a></li>
+<li><a href="html#text">Text, Text Area, Password &amp; Hidden Fields</a></li>
+<li><a href="html#checkboxes-and-radio-buttons">Checkboxes and Radio Buttons</a></li>
+<li><a href="html#file-input">File Input</a></li>
+<li><a href="html#drop-down-lists">Drop-Down Lists</a></li>
+<li><a href="html#buttons">Buttons</a></li>
+<li><a href="html#custom-macros">Custom Macros</a></li>
+<li><a href="html#generating-urls">Generating URLs</a></li>
+</ul>
+
+<p><a name="opening-a-form"></a></p>
+
+<h2>Opening A Form</h2>
+
+<p><strong>Opening A Form</strong></p>
+
+<pre><code>{{ Form::open(array('url' =&gt; 'foo/bar')) }}
+    //
+{{ Form::close() }}
+</code></pre>
+
+<p>By default, a <code>POST</code> method will be assumed; however, you are free to specify another method:</p>
+
+<pre><code>echo Form::open(array('url' =&gt; 'foo/bar', 'method' =&gt; 'put'))
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong> Since HTML forms only support <code>POST</code> and <code>GET</code>, <code>PUT</code> and <code>DELETE</code> methods will be spoofed by automatically adding a <code>_method</code> hidden field to your form.</p>
+</blockquote>
+
+<p>You may also open forms that point to named routes or controller actions:</p>
+
+<pre><code>echo Form::open(array('route' =&gt; 'route.name'))
+
+echo Form::open(array('action' =&gt; 'Controller@method'))
+</code></pre>
+
+<p>You may pass in route parameters as well:</p>
+
+<pre><code>echo Form::open(array('route' =&gt; array('route.name', $user-&gt;id)))
+
+echo Form::open(array('action' =&gt; array('Controller@method', $user-&gt;id)))
+</code></pre>
+
+<p>If your form is going to accept file uploads, add a <code>files</code> option to your array:</p>
+
+<pre><code>echo Form::open(array('url' =&gt; 'foo/bar', 'files' =&gt; true))
+</code></pre>
+
+<p><a name="csrf-protection"></a></p>
+
+<h2>CSRF Protection</h2>
+
+<p>Laravel provides an easy method of protecting your application from cross-site request forgeries. First, a random token is placed in your user's session. Don't sweat it, this is done automatically. The CSRF token will be added to your forms as a hidden field automatically. However, if you wish to generate the HTML for the hidden field, you may use the <code>token</code> method:</p>
+
+<p><strong>Adding The CSRF Token To A Form</strong></p>
+
+<pre><code>echo Form::token();
+</code></pre>
+
+<p><strong>Attaching The CSRF Filter To A Route</strong></p>
+
+<pre><code>Route::post('profile', array('before' =&gt; 'csrf', function()
+{
+    //
+}));
+</code></pre>
+
+<p><a name="form-model-binding"></a></p>
+
+<h2>Form Model Binding</h2>
+
+<p>Often, you will want to populate a form based on the contents of a model. To do so, use the <code>Form::model</code> method:</p>
+
+<p><strong>Opening A Model Form</strong></p>
+
+<pre><code>echo Form::model($user, array('route' =&gt; array('user.update', $user-&gt;id)))
+</code></pre>
+
+<p>Now, when you generate a form element, like a text input, the model's value matching the field's name will automatically be set as the field value. So, for example, for a text input named <code>email</code>, the user model's <code>email</code> attribute would be set as the value. However, there's more! If there is an item in the Session flash data matching the input name, that will take precedence over the model's value. So, the priority looks like this:</p>
+
+<ol>
+<li>Session Flash Data (Old Input)</li>
+<li>Explicitly Passed Value</li>
+<li>Model Attribute Data</li>
+</ol>
+
+<p>This allows you to quickly build forms that not only bind to model values, but easily re-populate if there is a validation error on the server!</p>
+
+<blockquote>
+  <p><strong>Note:</strong> When using <code>Form::model</code>, be sure to close your form with <code>Form::close</code>!</p>
+</blockquote>
+
+<p><a name="labels"></a></p>
+
+<h2>Labels</h2>
+
+<p><strong>Generating A Label Element</strong></p>
+
+<pre><code>echo Form::label('email', 'E-Mail Address');
+</code></pre>
+
+<p><strong>Specifying Extra HTML Attributes</strong></p>
+
+<pre><code>echo Form::label('email', 'E-Mail Address', array('class' =&gt; 'awesome'));
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong> After creating a label, any form element you create with a name matching the label name will automatically receive an ID matching the label name as well.</p>
+</blockquote>
+
+<p><a name="text"></a></p>
+
+<h2>Text, Text Area, Password &amp; Hidden Fields</h2>
+
+<p><strong>Generating A Text Input</strong></p>
+
+<pre><code>echo Form::text('username');
+</code></pre>
+
+<p><strong>Specifying A Default Value</strong></p>
+
+<pre><code>echo Form::text('email', 'example@gmail.com');
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong> The <em>hidden</em> and <em>textarea</em> methods have the same signature as the <em>text</em> method.</p>
+</blockquote>
+
+<p><strong>Generating A Password Input</strong></p>
+
+<pre><code>echo Form::password('password');
+</code></pre>
+
+<p><strong>Generating Other Inputs</strong></p>
+
+<pre><code>echo Form::email($name, $value = null, $attributes = array());
+echo Form::file($name, $attributes = array());
+</code></pre>
+
+<p><a name="checkboxes-and-radio-buttons"></a></p>
+
+<h2>Checkboxes and Radio Buttons</h2>
+
+<p><strong>Generating A Checkbox Or Radio Input</strong></p>
+
+<pre><code>echo Form::checkbox('name', 'value');
+
+echo Form::radio('name', 'value');
+</code></pre>
+
+<p><strong>Generating A Checkbox Or Radio Input That Is Checked</strong></p>
+
+<pre><code>echo Form::checkbox('name', 'value', true);
+
+echo Form::radio('name', 'value', true);
+</code></pre>
+
+<p><a name="file-input"></a></p>
+
+<h2>File Input</h2>
+
+<p><strong>Generating A File Input</strong></p>
+
+<pre><code>echo Form::file('image');
+</code></pre>
+
+<p><a name="drop-down-lists"></a></p>
+
+<h2>Drop-Down Lists</h2>
+
+<p><strong>Generating A Drop-Down List</strong></p>
+
+<pre><code>echo Form::select('size', array('L' =&gt; 'Large', 'S' =&gt; 'Small'));
+</code></pre>
+
+<p><strong>Generating A Drop-Down List With Selected Default</strong></p>
+
+<pre><code>echo Form::select('size', array('L' =&gt; 'Large', 'S' =&gt; 'Small'), 'S');
+</code></pre>
+
+<p><strong>Generating A Grouped List</strong></p>
+
+<pre><code>echo Form::select('animal', array(
+    'Cats' =&gt; array('leopard' =&gt; 'Leopard'),
+    'Dogs' =&gt; array('spaniel' =&gt; 'Spaniel'),
+));
+</code></pre>
+
+<p><strong>Generating A Drop-Down List With A Range</strong></p>
+
+<pre><code>echo Form::selectRange('number', 10, 20);
+</code></pre>
+
+<p><strong>Generating A List With Month Names</strong></p>
+
+<pre><code>echo Form::selectMonth('month');
+</code></pre>
+
+<p><a name="buttons"></a></p>
+
+<h2>Buttons</h2>
+
+<p><strong>Generating A Submit Button</strong></p>
+
+<pre><code>echo Form::submit('Click Me!');
+</code></pre>
+
+<blockquote>
+  <p><strong>Note:</strong> Need to create a button element? Try the <em>button</em> method. It has the same signature as <em>submit</em>.</p>
+</blockquote>
+
+<p><a name="custom-macros"></a></p>
+
+<h2>Custom Macros</h2>
+
+<p>It's easy to define your own custom Form class helpers called "macros". Here's how it works. First, simply register the macro with a given name and a Closure:</p>
+
+<p><strong>Registering A Form Macro</strong></p>
+
+<pre><code>Form::macro('myField', function()
+{
+    return '&lt;input type="awesome"&gt;';
+});
+</code></pre>
+
+<p>Now you can call your macro using its name:</p>
+
+<p><strong>Calling A Custom Form Macro</strong></p>
+
+<pre><code>echo Form::myField();
+</code></pre>
+
+<p><a name="generating-urls"></a></p>
+
+<h2>Generating URLs</h2>
+
+<p>For more information on generating URL's, check out the documentation on <a href="helpers#urls">helpers</a>.</p>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="html#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>

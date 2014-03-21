@@ -1,0 +1,649 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Laravel - The PHP Framework For Web Artisans.</title>
+
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="iKreativ">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../favicon.png?v=2">
+
+    <!-- we're minifying and combining all our css -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- grab jquery from google cdn. fall back to local if offline -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery.js"><\/script>')</script>
+
+    <!-- prettyprint -->
+    <script src="http://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- load up our js -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/application.js"></script>
+
+    <!-- fonts -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/source-code-pro.js"></script>
+
+    <!-- some conditionals for ie -->
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+    <!-- asynchronous google analytics. change UA-XXXXX-X to your site's ID -->
+    <script>
+        var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+        (function(d,t){
+    		var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        	s.parentNode.insertBefore(g,s)
+    	}(document,'script'));
+    </script>
+</head>
+
+<body id="index" class="page docs">
+
+	<!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- header -->
+        <header id="header" role="header">
+            <div class="boxed">
+                <!-- tagline -->
+                <div id="tagline">
+                    <h1>Documentation.</h1>
+                </div>
+                <!-- /tagline -->
+
+                <!-- version -->
+                <div id="version">
+                    <ul class="nolist">
+                                                    <li><a href="dev" title="Dev">Dev</a></li>
+                            <li><a href="4-1" title="4.1">4.1</a></li>
+                            <li class="current"><a href="4-0" title="4.0">4.0</a></li>
+                                            </ul>
+                </div>
+                <!-- /version -->
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- nav -->
+    	<nav id="primary">
+    	    <div class="boxed">
+    	        <div id="logo-head">
+    	           <a href="../index.html"><img src="../assets/img/logo-head.png" alt="Laravel" /></a>
+    	        </div>
+                <ul>
+                    <li><a href="../index.html">Welcome</a></li>
+                    <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                    <li><a href="../api/4.0" title="Laravel Framework API">API</a></li>
+                    <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                    <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                    <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /nav -->
+
+        <!-- content -->
+        <div id="content">
+
+            <!-- docs -->
+            <section id="documentation">
+                <article class="boxed">
+
+                    <!-- docs nav -->
+                    <nav id="docs">
+                        <!-- Pull table of contents -->
+                        <ul>
+<li>Preface
+
+<ul>
+<li><a href="introduction">Introduction</a></li>
+<li><a href="quick">Quickstart</a></li>
+<li><a href="contributing">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+
+<ul>
+<li><a href="installation">Installation</a></li>
+<li><a href="configuration">Configuration</a></li>
+<li><a href="lifecycle">Request Lifecycle</a></li>
+<li><a href="routing">Routing</a></li>
+<li><a href="requests">Requests &amp; Input</a></li>
+<li><a href="responses">Views &amp; Responses</a></li>
+<li><a href="controllers">Controllers</a></li>
+<li><a href="errors">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+
+<ul>
+<li><a href="cache">Cache</a></li>
+<li><a href="extending">Core Extension</a></li>
+<li><a href="events">Events</a></li>
+<li><a href="facades">Facades</a></li>
+<li><a href="html">Forms &amp; HTML</a></li>
+<li><a href="helpers">Helpers</a></li>
+<li><a href="ioc">IoC Container</a></li>
+<li><a href="localization">Localization</a></li>
+<li><a href="mail">Mail</a></li>
+<li><a href="packages">Package Development</a></li>
+<li><a href="pagination">Pagination</a></li>
+<li><a href="queues">Queues</a></li>
+<li><a href="security">Security</a></li>
+<li><a href="session">Session</a></li>
+<li><a href="templates">Templates</a></li>
+<li><a href="testing">Unit Testing</a></li>
+<li><a href="validation">Validation</a></li>
+</ul></li>
+<li>Database
+
+<ul>
+<li><a href="database">Basic Usage</a></li>
+<li><a href="queries">Query Builder</a></li>
+<li><a href="eloquent">Eloquent ORM</a></li>
+<li><a href="schema">Schema Builder</a></li>
+<li><a href="migrations">Migrations &amp; Seeding</a></li>
+<li><a href="redis">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+
+<ul>
+<li><a href="artisan">Overview</a></li>
+<li><a href="commands">Development</a></li>
+</ul></li>
+</ul>
+                    </nav>
+                    <!-- /docs nav -->
+
+                    <!-- docs content -->
+                    <div id="docs-content">
+                        <h1>Helper Functions</h1>
+
+<ul>
+<li><a href="helpers#arrays">Arrays</a></li>
+<li><a href="helpers#paths">Paths</a></li>
+<li><a href="helpers#strings">Strings</a></li>
+<li><a href="helpers#urls">URLs</a></li>
+<li><a href="helpers#miscellaneous">Miscellaneous</a></li>
+</ul>
+
+<p><a name="arrays"></a></p>
+
+<h2>Arrays</h2>
+
+<h3>array_add</h3>
+
+<p>The <code>array_add</code> function adds a given key / value pair to the array if the given key doesn't already exist in the array.</p>
+
+<pre><code>$array = array('foo' =&gt; 'bar');
+
+$array = array_add($array, 'key', 'value');
+</code></pre>
+
+<h3>array_divide</h3>
+
+<p>The <code>array_divide</code> function returns two arrays, one containing the keys, and the other containing the values of the original array.</p>
+
+<pre><code>$array = array('foo' =&gt; 'bar');
+
+list($keys, $values) = array_divide($array);
+</code></pre>
+
+<h3>array_dot</h3>
+
+<p>The <code>array_dot</code> function flattens a multi-dimensional array into a single level array that uses "dot" notation to indicate depth.</p>
+
+<pre><code>$array = array('foo' =&gt; array('bar' =&gt; 'baz'));
+
+$array = array_dot($array);
+
+// array('foo.bar' =&gt; 'baz');
+</code></pre>
+
+<h3>array_except</h3>
+
+<p>The <code>array_except</code> method removes the given key / value pairs from the array.</p>
+
+<pre><code>$array = array_except($array, array('keys', 'to', 'remove'));
+</code></pre>
+
+<h3>array_fetch</h3>
+
+<p>The <code>array_fetch</code> method returns a flattened array containing the selected nested element.</p>
+
+<pre><code>$array = array(
+    array('developer' =&gt; array('name' =&gt; 'Taylor')),
+    array('developer' =&gt; array('name' =&gt; 'Dayle')),
+);
+
+$array = array_fetch($array, 'developer.name');
+
+// array('Taylor', 'Dayle');
+</code></pre>
+
+<h3>array_first</h3>
+
+<p>The <code>array_first</code> method returns the first element of an array passing a given truth test.</p>
+
+<pre><code>$array = array(100, 200, 300);
+
+$value = array_first($array, function($key, $value)
+{
+    return $value &gt;= 150;
+});
+</code></pre>
+
+<p>A default value may also be passed as the third parameter:</p>
+
+<pre><code>$value = array_first($array, $callback, $default);
+</code></pre>
+
+<h3>array_flatten</h3>
+
+<p>The <code>array_flatten</code> method will flatten a multi-dimensional array into a single level.</p>
+
+<pre><code>$array = array('name' =&gt; 'Joe', 'languages' =&gt; array('PHP', 'Ruby'));
+
+$array = array_flatten($array);
+
+// array('Joe', 'PHP', 'Ruby');
+</code></pre>
+
+<h3>array_forget</h3>
+
+<p>The <code>array_forget</code> method will remove a given key / value pair from a deeply nested array using "dot" notation.</p>
+
+<pre><code>$array = array('names' =&gt; array('joe' =&gt; array('programmer')));
+
+$array = array_forget($array, 'names.joe');
+</code></pre>
+
+<h3>array_get</h3>
+
+<p>The <code>array_get</code> method will retrieve a given value from a deeply nested array using "dot" notation.</p>
+
+<pre><code>$array = array('names' =&gt; array('joe' =&gt; array('programmer')));
+
+$value = array_get($array, 'names.joe');
+</code></pre>
+
+<h3>array_only</h3>
+
+<p>The <code>array_only</code> method will return only the specified key / value pairs from the array.</p>
+
+<pre><code>$array = array('name' =&gt; 'Joe', 'age' =&gt; 27, 'votes' =&gt; 1);
+
+$array = array_only($array, array('name', 'votes'));
+</code></pre>
+
+<h3>array_pluck</h3>
+
+<p>The <code>array_pluck</code> method will pluck a list of the given key / value pairs from the array.</p>
+
+<pre><code>$array = array(array('name' =&gt; 'Taylor'), array('name' =&gt; 'Dayle'));
+
+$array = array_pluck($array, 'name');
+
+// array('Taylor', 'Dayle');
+</code></pre>
+
+<h3>array_pull</h3>
+
+<p>The <code>array_pull</code> method will return a given key / value pair from the array, as well as remove it.</p>
+
+<pre><code>$array = array('name' =&gt; 'Taylor', 'age' =&gt; 27);
+
+$name = array_pull($array, 'name');
+</code></pre>
+
+<h3>array_set</h3>
+
+<p>The <code>array_set</code> method will set a value within a deeply nested array using "dot" notation.</p>
+
+<pre><code>$array = array('names' =&gt; array('programmer' =&gt; 'Joe'));
+
+array_set($array, 'names.editor', 'Taylor');
+</code></pre>
+
+<h3>array_sort</h3>
+
+<p>The <code>array_sort</code> method sorts the array by the results of the given Closure.</p>
+
+<pre><code>$array = array(
+    array('name' =&gt; 'Jill'),
+    array('name' =&gt; 'Barry'),
+);
+
+$array = array_values(array_sort($array, function($value)
+{
+    return $value['name'];
+}));
+</code></pre>
+
+<h3>head</h3>
+
+<p>Return the first element in the array. Useful for method chaining in PHP 5.3.x.</p>
+
+<pre><code>$first = head($this-&gt;returnsArray('foo'));
+</code></pre>
+
+<h3>last</h3>
+
+<p>Return the last element in the array. Useful for method chaining.</p>
+
+<pre><code>$last = last($this-&gt;returnsArray('foo'));
+</code></pre>
+
+<p><a name="paths"></a></p>
+
+<h2>Paths</h2>
+
+<h3>app_path</h3>
+
+<p>Get the fully qualified path to the <code>app</code> directory.</p>
+
+<h3>base_path</h3>
+
+<p>Get the fully qualified path to the root of the application install.</p>
+
+<h3>public_path</h3>
+
+<p>Get the fully qualified path to the <code>public</code> directory.</p>
+
+<h3>storage_path</h3>
+
+<p>Get the fully qualified path to the <code>app/storage</code> directory.</p>
+
+<p><a name="strings"></a></p>
+
+<h2>Strings</h2>
+
+<h3>camel_case</h3>
+
+<p>Convert the given string to <code>camelCase</code>.</p>
+
+<pre><code>$camel = camel_case('foo_bar');
+
+// fooBar
+</code></pre>
+
+<h3>class_basename</h3>
+
+<p>Get the class name of the given class, without any namespace names.</p>
+
+<pre><code>$class = class_basename('Foo\Bar\Baz');
+
+// Baz
+</code></pre>
+
+<h3>e</h3>
+
+<p>Run <code>htmlentities</code> over the given string, with UTF-8 support.</p>
+
+<pre><code>$entities = e('&lt;html&gt;foo&lt;/html&gt;');
+</code></pre>
+
+<h3>ends_with</h3>
+
+<p>Determine if the given haystack ends with a given needle.</p>
+
+<pre><code>$value = ends_with('This is my name', 'name');
+</code></pre>
+
+<h3>snake_case</h3>
+
+<p>Convert the given string to <code>snake_case</code>.</p>
+
+<pre><code>$snake = snake_case('fooBar');
+
+// foo_bar
+</code></pre>
+
+<h3>starts_with</h3>
+
+<p>Determine if the given haystack begins with the given needle.</p>
+
+<pre><code>$value = starts_with('This is my name', 'This');
+</code></pre>
+
+<h3>str_contains</h3>
+
+<p>Determine if the given haystack contains the given needle.</p>
+
+<pre><code>$value = str_contains('This is my name', 'my');
+</code></pre>
+
+<h3>str_finish</h3>
+
+<p>Add a single instance of the given needle to the haystack. Remove any extra instances.</p>
+
+<pre><code>$string = str_finish('this/string', '/');
+
+// this/string/
+</code></pre>
+
+<h3>str_is</h3>
+
+<p>Determine if a given string matches a given pattern. Asterisks may be used to indicate wildcards.</p>
+
+<pre><code>$value = str_is('foo*', 'foobar');
+</code></pre>
+
+<h3>str_plural</h3>
+
+<p>Convert a string to its plural form (English only).</p>
+
+<pre><code>$plural = str_plural('car');
+</code></pre>
+
+<h3>str_random</h3>
+
+<p>Generate a random string of the given length.</p>
+
+<pre><code>$string = str_random(40);
+</code></pre>
+
+<h3>str_singular</h3>
+
+<p>Convert a string to its singular form (English only).</p>
+
+<pre><code>$singular = str_singular('cars');
+</code></pre>
+
+<h3>studly_case</h3>
+
+<p>Convert the given string to <code>StudlyCase</code>.</p>
+
+<pre><code>$value = studly_case('foo_bar');
+
+// FooBar
+</code></pre>
+
+<h3>trans</h3>
+
+<p>Translate a given language line. Alias of <code>Lang::get</code>.</p>
+
+<pre><code>$value = trans('validation.required'):
+</code></pre>
+
+<h3>trans_choice</h3>
+
+<p>Tranlate a given language line with inflection. Alias of <code>Lang::choice</code>.</p>
+
+<pre><code>$value = trans_choice('foo.bar', $count);
+</code></pre>
+
+<p><a name="urls"></a></p>
+
+<h2>URLs</h2>
+
+<h3>action</h3>
+
+<p>Generate a URL for a given controller action.</p>
+
+<pre><code>$url = action('HomeController@getIndex', $params);
+</code></pre>
+
+<h3>route</h3>
+
+<p>Generate a URL for a given named route.</p>
+
+<pre><code>$url = route('routeName', $params);
+</code></pre>
+
+<h3>asset</h3>
+
+<p>Generate a URL for an asset.</p>
+
+<pre><code>$url = asset('img/photo.jpg');
+</code></pre>
+
+<h3>link_to</h3>
+
+<p>Generate a HTML link to the given URL.</p>
+
+<pre><code>echo link_to('foo/bar', $title, $attributes = array(), $secure = null);
+</code></pre>
+
+<h3>link_to_asset</h3>
+
+<p>Generate a HTML link to the given asset.</p>
+
+<pre><code>echo link_to_asset('foo/bar.zip', $title, $attributes = array(), $secure = null);
+</code></pre>
+
+<h3>link_to_route</h3>
+
+<p>Generate a HTML link to the given route.</p>
+
+<pre><code>echo link_to_route('route.name', $title, $parameters = array(), $attributes = array());
+</code></pre>
+
+<h3>link_to_action</h3>
+
+<p>Generate a HTML link to the given controller action.</p>
+
+<pre><code>echo link_to_action('HomeController@getIndex', $title, $parameters = array(), $attributes = array());
+</code></pre>
+
+<h3>secure_asset</h3>
+
+<p>Generate a HTML link to the given asset using HTTPS.</p>
+
+<pre><code>echo secure_asset('foo/bar.zip', $title, $attributes = array());
+</code></pre>
+
+<h3>secure_url</h3>
+
+<p>Generate a fully qualified URL to a given path using HTTPS.</p>
+
+<pre><code>echo secure_url('foo/bar', $parameters = array());
+</code></pre>
+
+<h3>url</h3>
+
+<p>Generate a fully qualified URL to the given path.</p>
+
+<pre><code>echo url('foo/bar', $parameters = array(), $secure = null);
+</code></pre>
+
+<p><a name="miscellaneous"></a></p>
+
+<h2>Miscellaneous</h2>
+
+<h3>csrf_token</h3>
+
+<p>Get the value of the current CSRF token.</p>
+
+<pre><code>$token = csrf_token();
+</code></pre>
+
+<h3>dd</h3>
+
+<p>Dump the given variable and end execution of the script.</p>
+
+<pre><code>dd($value);
+</code></pre>
+
+<h3>value</h3>
+
+<p>If the given value is a <code>Closure</code>, return the value returned by the <code>Closure</code>. Otherwise, return the value.</p>
+
+<pre><code>$value = value(function() { return 'bar'; });
+</code></pre>
+
+<h3>with</h3>
+
+<p>Return the given object. Useful for method chaining constructors in PHP 5.3.x.</p>
+
+<pre><code>$value = with(new Foo)-&gt;doWork();
+</code></pre>
+                    </div>
+                    <!-- /docs content -->
+
+                </article>
+    	    </section>
+    	    <!-- /docs -->
+
+        </div>
+    	<!-- /content -->
+
+        <!-- footer -->
+        <footer id="foot" class="textcenter">
+            <div class="boxed">
+
+                <!-- nav -->
+                <nav id="secondary">
+                    <div id="logo-foot">
+        	           <a href="../index.html"><img src="../assets/img/logo-foot.png" alt="Laravel" /></a>
+        	        </div>
+                    <ul>
+                        <li><a href="../index.html">Welcome</a></li>
+                        <li class="current-item"><a href="docs" title="Documentation">Documentation</a></li>
+                        <li><a href="api/4.0" title="Laravel Framework API">API</a></li>
+                        <li><a href="https://github.com/laravel/laravel" title="Github">Github</a></li>
+                        <li><a href="http://laravel.io/forum" title="Laravel Forums">Forums</a></li>
+                        <li><a href="http://twitter.com/laravelphp" title="Laravel on Twitter">Twitter</a></li>
+                    </ul>
+                </nav>
+                <!-- /nav -->
+
+            </div>
+        </footer>
+        <!-- /footer -->
+
+        <!-- to the top -->
+        <div id="top">
+            <a href="helpers#index" title="Back to the top">
+                <i class="icon-chevron-up"></i>
+            </a>
+        </div>
+        <!-- /to the top -->
+
+    </div>
+    <!-- /wrapper -->
+
+    <!-- copyright -->
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">Laravel is a trademark of Taylor Otwell. Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>. Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>.</div>
+        </div>
+    </section>
+    <!-- /copyright -->
+
+</body>
+</html>
