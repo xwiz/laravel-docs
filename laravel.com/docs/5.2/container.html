@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Service Container - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../build/assets/css/laravel-d02b878c.css">
+	<link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="https://laravel.com/" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="container.html#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/container">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="container.html">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/container">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/container">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/container">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Service Container</h1>
+<ul>
+<li><a href="container.html#introduction">Introduction</a></li>
+<li><a href="container.html#binding">Binding</a>
+<ul>
+<li><a href="container.html#binding-interfaces-to-implementations">Binding Interfaces To Implementations</a></li>
+<li><a href="container.html#contextual-binding">Contextual Binding</a></li>
+<li><a href="container.html#tagging">Tagging</a></li>
+</ul></li>
+<li><a href="container.html#resolving">Resolving</a></li>
+<li><a href="container.html#container-events">Container Events</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>The Laravel service container is a powerful tool for managing class dependencies and performing dependency injection. Dependency injection is a fancy phrase that essentially means this: class dependencies are &quot;injected&quot; into the class via the constructor or, in some cases, &quot;setter&quot; methods.</p>
+<p>Let's look at a simple example:</p>
+<pre><code>&lt;?php
+
+namespace App\Jobs;
+
+use App\User;
+use Illuminate\Contracts\Mail\Mailer;
+use Illuminate\Contracts\Bus\SelfHandling;
+
+class PurchasePodcast implements SelfHandling
+{
+    /**
+     * The mailer implementation.
+     */
+    protected $mailer;
+
+    /**
+     * Create a new instance.
+     *
+     * @param  Mailer  $mailer
+     * @return void
+     */
+    public function __construct(Mailer $mailer)
+    {
+        $this-&gt;mailer = $mailer;
+    }
+
+    /**
+     * Purchase a podcast.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        //
+    }
+}</code></pre>
+<p>In this example, the <code>PurchasePodcast</code> job needs to send e-mails when a podcast is purchased. So, we will <strong>inject</strong> a service that is able to send e-mails. Since the service is injected, we are able to easily swap it out with another implementation. We are also able to easily &quot;mock&quot;, or create a dummy implementation of the mailer when testing our application.</p>
+<p>A deep understanding of the Laravel service container is essential to building a powerful, large application, as well as for contributing to the Laravel core itself.</p>
+<p><a name="binding"></a></p>
+<h2>Binding</h2>
+<p>Almost all of your service container bindings will be registered within <a href="providers.html">service providers</a>, so all of these examples will demonstrate using the container in that context. However, there is no need to bind classes into the container if they do not depend on any interfaces. The container does not need to be instructed on how to build these objects, since it can automatically resolve such &quot;concrete&quot; objects using PHP's reflection services.</p>
+<p>Within a service provider, you always have access to the container via the <code>$this-&gt;app</code> instance variable. We can register a binding using the <code>bind</code> method, passing the class or interface name that we wish to register along with a <code>Closure</code> that returns an instance of the class:</p>
+<pre><code>$this-&gt;app-&gt;bind('HelpSpot\API', function ($app) {
+    return new HelpSpot\API($app['HttpClient']);
+});</code></pre>
+<p>Notice that we receive the container itself as an argument to the resolver. We can then use the container to resolve sub-dependencies of the object we are building.</p>
+<h4>Binding A Singleton</h4>
+<p>The <code>singleton</code> method binds a class or interface into the container that should only be resolved one time, and then that same instance will be returned on subsequent calls into the container:</p>
+<pre><code>$this-&gt;app-&gt;singleton('FooBar', function ($app) {
+    return new FooBar($app['SomethingElse']);
+});</code></pre>
+<h4>Binding Instances</h4>
+<p>You may also bind an existing object instance into the container using the <code>instance</code> method. The given instance will always be returned on subsequent calls into the container:</p>
+<pre><code>$fooBar = new FooBar(new SomethingElse);
+
+$this-&gt;app-&gt;instance('FooBar', $fooBar);</code></pre>
+<p><a name="binding-interfaces-to-implementations"></a></p>
+<h3>Binding Interfaces To Implementations</h3>
+<p>A very powerful feature of the service container is its ability to bind an interface to a given implementation. For example, let's assume we have an <code>EventPusher</code> interface and a <code>RedisEventPusher</code> implementation. Once we have coded our <code>RedisEventPusher</code> implementation of this interface, we can register it with the service container like so:</p>
+<pre><code>$this-&gt;app-&gt;bind('App\Contracts\EventPusher', 'App\Services\RedisEventPusher');</code></pre>
+<p>This tells the container that it should inject the <code>RedisEventPusher</code> when a class needs an implementation of <code>EventPusher</code>. Now we can type-hint the <code>EventPusher</code> interface in a constructor, or any other location where dependencies are injected by the service container:</p>
+<pre><code>use App\Contracts\EventPusher;
+
+/**
+ * Create a new class instance.
+ *
+ * @param  EventPusher  $pusher
+ * @return void
+ */
+public function __construct(EventPusher $pusher)
+{
+    $this-&gt;pusher = $pusher;
+}</code></pre>
+<p><a name="contextual-binding"></a></p>
+<h3>Contextual Binding</h3>
+<p>Sometimes you may have two classes that utilize the same interface, but you wish to inject different implementations into each class. For example, when our system receives a new Order, we may want to send an event via <a href="http://www.pubnub.com/">PubNub</a> rather than Pusher. Laravel provides a simple, fluent interface for defining this behavior:</p>
+<pre><code>$this-&gt;app-&gt;when('App\Handlers\Commands\CreateOrderHandler')
+          -&gt;needs('App\Contracts\EventPusher')
+          -&gt;give('App\Services\PubNubEventPusher');</code></pre>
+<p>You may even pass a Closure to the <code>give</code> method:</p>
+<pre><code>$this-&gt;app-&gt;when('App\Handlers\Commands\CreateOrderHandler')
+          -&gt;needs('App\Contracts\EventPusher')
+          -&gt;give(function () {
+                  // Resolve dependency...
+              });</code></pre>
+<h4>Binding Primitives</h4>
+<p>Sometimes you may have a class that receives some injected classes, but also needs an injected primitive value such as an integer. You may easily use contextual binding to inject any value your class may need:</p>
+<pre><code>$this-&gt;app-&gt;when('App\Handlers\Commands\CreateOrderHandler')
+          -&gt;needs('$maxOrderCount')
+          -&gt;give(10);</code></pre>
+<p><a name="tagging"></a></p>
+<h3>Tagging</h3>
+<p>Occasionally, you may need to resolve all of a certain &quot;category&quot; of binding. For example, perhaps you are building a report aggregator that receives an array of many different <code>Report</code> interface implementations. After registering the <code>Report</code> implementations, you can assign them a tag using the <code>tag</code> method:</p>
+<pre><code>$this-&gt;app-&gt;bind('SpeedReport', function () {
+    //
+});
+
+$this-&gt;app-&gt;bind('MemoryReport', function () {
+    //
+});
+
+$this-&gt;app-&gt;tag(['SpeedReport', 'MemoryReport'], 'reports');</code></pre>
+<p>Once the services have been tagged, you may easily resolve them all via the <code>tagged</code> method:</p>
+<pre><code>$this-&gt;app-&gt;bind('ReportAggregator', function ($app) {
+    return new ReportAggregator($app-&gt;tagged('reports'));
+});</code></pre>
+<p><a name="resolving"></a></p>
+<h2>Resolving</h2>
+<p>There are several ways to resolve something out of the container. First, you may use the <code>make</code> method, which accepts the name of the class or interface you wish to resolve:</p>
+<pre><code>$fooBar = $this-&gt;app-&gt;make('FooBar');</code></pre>
+<p>Secondly, you may access the container like an array, since it implements PHP's <code>ArrayAccess</code> interface:</p>
+<pre><code>$fooBar = $this-&gt;app['FooBar'];</code></pre>
+<p>Lastly, but most importantly, you may simply &quot;type-hint&quot; the dependency in the constructor of a class that is resolved by the container, including <a href="controllers.html">controllers</a>, <a href="events.html">event listeners</a>, <a href="queues.html">queue jobs</a>, <a href="middleware.html">middleware</a>, and more. In practice, this is how most of your objects are resolved by the container.</p>
+<p>The container will automatically inject dependencies for the classes it resolves. For example, you may type-hint a repository defined by your application in a controller's constructor. The repository will automatically be resolved and injected into the class:</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Users\Repository as UserRepository;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository instance.
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Show the user with the given ID.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
+}</code></pre>
+<p><a name="container-events"></a></p>
+<h2>Container Events</h2>
+<p>The service container fires an event each time it resolves an object. You may listen to this event using the <code>resolving</code> method:</p>
+<pre><code>$this-&gt;app-&gt;resolving(function ($object, $app) {
+    // Called when container resolves object of any type...
+});
+
+$this-&gt;app-&gt;resolving(FooBar::class, function (FooBar $fooBar, $app) {
+    // Called when container resolves objects of type "FooBar"...
+});</code></pre>
+<p>As you can see, the object being resolved will be passed to the callback, allowing you to set any additional properties on the object before it is given to its consumer.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="container.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = '5.2';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="../../assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="../../build/assets/js/laravel-02364550.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>

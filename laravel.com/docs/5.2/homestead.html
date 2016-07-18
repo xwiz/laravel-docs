@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Laravel Homestead - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../build/assets/css/laravel-d02b878c.css">
+	<link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="https://laravel.com/" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="homestead.html#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/homestead">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="homestead.html">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/homestead">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/homestead">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/homestead">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Laravel Homestead</h1>
+<ul>
+<li><a href="homestead.html#introduction">Introduction</a></li>
+<li><a href="homestead.html#installation-and-setup">Installation &amp; Setup</a>
+<ul>
+<li><a href="homestead.html#first-steps">First Steps</a></li>
+<li><a href="homestead.html#configuring-homestead">Configuring Homestead</a></li>
+<li><a href="homestead.html#launching-the-vagrant-box">Launching The Vagrant Box</a></li>
+<li><a href="homestead.html#per-project-installation">Per Project Installation</a></li>
+<li><a href="homestead.html#installing-mariadb">Installing MariaDB</a></li>
+</ul></li>
+<li><a href="homestead.html#daily-usage">Daily Usage</a>
+<ul>
+<li><a href="homestead.html#accessing-homestead-globally">Accessing Homestead Globally</a></li>
+<li><a href="homestead.html#connecting-via-ssh">Connecting Via SSH</a></li>
+<li><a href="homestead.html#connecting-to-databases">Connecting To Databases</a></li>
+<li><a href="homestead.html#adding-additional-sites">Adding Additional Sites</a></li>
+<li><a href="homestead.html#configuring-cron-schedules">Configuring Cron Schedules</a></li>
+<li><a href="homestead.html#ports">Ports</a></li>
+</ul></li>
+<li><a href="homestead.html#network-interfaces">Network Interfaces</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel strives to make the entire PHP development experience delightful, including your local development environment. <a href="http://vagrantup.com">Vagrant</a> provides a simple, elegant way to manage and provision Virtual Machines.</p>
+<p>Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, HHVM, a web server, and any other server software on your local machine. No more worrying about messing up your operating system! Vagrant boxes are completely disposable. If something goes wrong, you can destroy and re-create the box in minutes!</p>
+<p>Homestead runs on any Windows, Mac, or Linux system, and includes the Nginx web server, PHP 7.0, MySQL, Postgres, Redis, Memcached, Node, and all of the other goodies you need to develop amazing Laravel applications.</p>
+<blockquote>
+<p><strong>Note:</strong> If you are using Windows, you may need to enable hardware virtualization (VT-x). It can usually be enabled via your BIOS. If you are using Hyper-V on a UEFI system you may additionally need to disable Hyper-V in order to access VT-x.</p>
+</blockquote>
+<p><a name="included-software"></a></p>
+<h3>Included Software</h3>
+<ul>
+<li>Ubuntu 16.04</li>
+<li>Git</li>
+<li>PHP 7.0</li>
+<li>HHVM</li>
+<li>Nginx</li>
+<li>MySQL</li>
+<li>MariaDB</li>
+<li>Sqlite3</li>
+<li>Postgres</li>
+<li>Composer</li>
+<li>Node (With PM2, Bower, Grunt, and Gulp)</li>
+<li>Redis</li>
+<li>Memcached</li>
+<li>Beanstalkd</li>
+</ul>
+<p><a name="installation-and-setup"></a></p>
+<h2>Installation &amp; Setup</h2>
+<p><a name="first-steps"></a></p>
+<h3>First Steps</h3>
+<p>Before launching your Homestead environment, you must install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox 5.x</a> or <a href="http://www.vmware.com">VMWare</a> as well as <a href="http://www.vagrantup.com/downloads.html">Vagrant</a>. All of these software packages provide easy-to-use visual installers for all popular operating systems.</p>
+<p>To use the VMware provider, you will need to purchase both VMware Fusion / Workstation and the <a href="http://www.vagrantup.com/vmware">VMware Vagrant plug-in</a>. Though it is not free, VMware can provide faster shared folder performance out of the box.</p>
+<h4>Installing The Homestead Vagrant Box</h4>
+<p>Once VirtualBox / VMware and Vagrant have been installed, you should add the <code>laravel/homestead</code> box to your Vagrant installation using the following command in your terminal. It will take a few minutes to download the box, depending on your Internet connection speed:</p>
+<pre><code>vagrant box add laravel/homestead</code></pre>
+<p>If this command fails, make sure your Vagrant installation is up to date.</p>
+<h4>Installing Homestead</h4>
+<p>You may install Homestead by simply cloning the repository. Consider cloning the repository into a <code>Homestead</code> folder within your &quot;home&quot; directory, as the Homestead box will serve as the host to all of your Laravel projects:</p>
+<pre><code>cd ~
+
+git clone https://github.com/laravel/homestead.git Homestead</code></pre>
+<p>Once you have cloned the Homestead repository, run the <code>bash init.sh</code> command from the Homestead directory to create the <code>Homestead.yaml</code> configuration file. The <code>Homestead.yaml</code> file will be placed in the <code>~/.homestead</code> hidden directory:</p>
+<pre><code>bash init.sh</code></pre>
+<p><a name="configuring-homestead"></a></p>
+<h3>Configuring Homestead</h3>
+<h4>Setting Your Provider</h4>
+<p>The <code>provider</code> key in your <code>~/.homestead/Homestead.yaml</code> file indicates which Vagrant provider should be used: <code>virtualbox</code>, <code>vmware_fusion</code>, or <code>vmware_workstation</code>. You may set this to the provider you prefer:</p>
+<pre><code>provider: virtualbox</code></pre>
+<h4>Configuring Shared Folders</h4>
+<p>The <code>folders</code> property of the <code>Homestead.yaml</code> file lists all of the folders you wish to share with your Homestead environment. As files within these folders are changed, they will be kept in sync between your local machine and the Homestead environment. You may configure as many shared folders as necessary:</p>
+<pre><code>folders:
+    - map: ~/Code
+      to: /home/vagrant/Code</code></pre>
+<p>To enable <a href="http://docs.vagrantup.com/v2/synced-folders/nfs.html">NFS</a>, just add a simple flag to your synced folder configuration:</p>
+<pre><code>folders:
+    - map: ~/Code
+      to: /home/vagrant/Code
+      type: "nfs"</code></pre>
+<h4>Configuring Nginx Sites</h4>
+<p>Not familiar with Nginx? No problem. The <code>sites</code> property allows you to easily map a &quot;domain&quot; to a folder on your Homestead environment. A sample site configuration is included in the <code>Homestead.yaml</code> file. Again, you may add as many sites to your Homestead environment as necessary. Homestead can serve as a convenient, virtualized environment for every Laravel project you are working on:</p>
+<pre><code>sites:
+    - map: homestead.app
+      to: /home/vagrant/Code/Laravel/public</code></pre>
+<p>You can make any Homestead site use <a href="http://hhvm.com">HHVM</a> by setting the <code>hhvm</code> option to <code>true</code>:</p>
+<pre><code>sites:
+    - map: homestead.app
+      to: /home/vagrant/Code/Laravel/public
+      hhvm: true</code></pre>
+<p>If you change the <code>sites</code> property after provisioning the Homestead box, you should re-run <code>vagrant reload --provision</code>  to update the Nginx configuration on the virtual machine.</p>
+<h4>The Hosts File</h4>
+<p>You must add the &quot;domains&quot; for your Nginx sites to the <code>hosts</code> file on your machine. The <code>hosts</code> file will redirect requests for your Homestead sites into your Homestead machine. On Mac and Linux, this file is located at <code>/etc/hosts</code>. On Windows, it is located at <code>C:\Windows\System32\drivers\etc\hosts</code>. The lines you add to this file will look like the following:</p>
+<pre><code>192.168.10.10  homestead.app</code></pre>
+<p>Make sure the IP address listed is the one set in your <code>~/.homestead/Homestead.yaml</code> file. Once you have added the domain to your <code>hosts</code> file and launched the Vagrant box you will be able to access the site via your web browser:</p>
+<pre><code>http://homestead.app</code></pre>
+<p><a name="launching-the-vagrant-box"></a></p>
+<h3>Launching The Vagrant Box</h3>
+<p>Once you have edited the <code>Homestead.yaml</code> to your liking, run the <code>vagrant up</code> command from your Homestead directory. Vagrant will boot the virtual machine and automatically configure your shared folders and Nginx sites.</p>
+<p>To destroy the machine, you may use the <code>vagrant destroy --force</code> command.</p>
+<p><a name="per-project-installation"></a></p>
+<h3>Per Project Installation</h3>
+<p>Instead of installing Homestead globally and sharing the same Homestead box across all of your projects, you may instead configure a Homestead instance for each project you manage. Installing Homestead per project may be beneficial if you wish to ship a <code>Vagrantfile</code> with your project, allowing others working on the project to simply <code>vagrant up</code>.</p>
+<p>To install Homestead directly into your project, require it using Composer:</p>
+<pre><code>composer require laravel/homestead --dev</code></pre>
+<p>Once Homestead has been installed, use the <code>make</code> command to generate the <code>Vagrantfile</code> and <code>Homestead.yaml</code> file in your project root. The <code>make</code> command will automatically configure the <code>sites</code> and <code>folders</code> directives in the <code>Homestead.yaml</code> file.</p>
+<p>Mac / Linux:</p>
+<pre><code>php vendor/bin/homestead make</code></pre>
+<p>Windows:</p>
+<pre><code>vendor\\bin\\homestead make</code></pre>
+<p>Next, run the <code>vagrant up</code> command in your terminal and access your project at <code>http://homestead.app</code> in your browser. Remember, you will still need to add an <code>/etc/hosts</code> file entry for <code>homestead.app</code> or the domain of your choice.</p>
+<p><a name="installing-mariadb"></a></p>
+<h3>Installing MariaDB</h3>
+<p>If you prefer to use MariaDB instead of MySQL, you may add the <code>mariadb</code> option to your <code>Homestead.yaml</code> file. This option will remove MySQL and install MariaDB. MariaDB serves as a drop-in replacement for MySQL so you should still use the <code>mysql</code> database driver in your application's database configuration:</p>
+<pre><code>box: laravel/homestead
+ip: "192.168.20.20"
+memory: 2048
+cpus: 4
+provider: virtualbox
+mariadb: true</code></pre>
+<p><a name="daily-usage"></a></p>
+<h2>Daily Usage</h2>
+<p><a name="accessing-homestead-globally"></a></p>
+<h3>Accessing Homestead Globally</h3>
+<p>Sometimes you may want to <code>vagrant up</code> your Homestead machine from anywhere on your filesystem. You can do this by adding a simple Bash function to your Bash profile. This function will allow you to run any Vagrant command from anywhere on your system and will automatically point that command to your Homestead installation:</p>
+<pre><code>function homestead() {
+    ( cd ~/Homestead &amp;&amp; vagrant $* )
+}</code></pre>
+<p>Make sure to tweak the <code>~/Homestead</code> path in the function to the location of your actual Homestead installation. Once the function is installed, you may run commands like <code>homestead up</code> or <code>homestead ssh</code> from anywhere on your system.</p>
+<p><a name="connecting-via-ssh"></a></p>
+<h3>Connecting Via SSH</h3>
+<p>You can SSH into your virtual machine by issuing the <code>vagrant ssh</code> terminal command from your Homestead directory.</p>
+<p>But, since you will probably need to SSH into your Homestead machine frequently, consider adding the &quot;function&quot; described above to your host machine to quickly SSH into the Homestead box.</p>
+<p><a name="connecting-to-databases"></a></p>
+<h3>Connecting To Databases</h3>
+<p>A <code>homestead</code> database is configured for both MySQL and Postgres out of the box. For even more convenience, Laravel's <code>.env</code> file configures the framework to use this database out of the box.</p>
+<p>To connect to your MySQL or Postgres database from your host machine via Navicat or Sequel Pro, you should connect to <code>127.0.0.1</code> and port <code>33060</code> (MySQL) or <code>54320</code> (Postgres). The username and password for both databases is <code>homestead</code> / <code>secret</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> You should only use these non-standard ports when connecting to the databases from your host machine. You will use the default 3306 and 5432 ports in your Laravel database configuration file since Laravel is running <em>within</em> the virtual machine.</p>
+</blockquote>
+<p><a name="adding-additional-sites"></a></p>
+<h3>Adding Additional Sites</h3>
+<p>Once your Homestead environment is provisioned and running, you may want to add additional Nginx sites for your Laravel applications. You can run as many Laravel installations as you wish on a single Homestead environment. To add an additional site, simply add the site to your <code>~/.homestead/Homestead.yaml</code> file and then run the <code>vagrant provision</code> terminal command from your Homestead directory.</p>
+<p><a name="configuring-cron-schedules"></a></p>
+<h3>Configuring Cron Schedules</h3>
+<p>Laravel provides a convenient way to <a href="scheduling.html">schedule Cron jobs</a> by scheduling a single <code>schedule:run</code> Artisan command to be run every minute. The <code>schedule:run</code> command will examine the job scheduled defined in your <code>App\Console\Kernel</code> class to determine which jobs should be run.</p>
+<p>If you would like the <code>schedule:run</code> command to be run for a Homestead site, you may set the <code>schedule</code> option to <code>true</code> when defining the site:</p>
+<pre><code>sites:
+    - map: homestead.app
+      to: /home/vagrant/Code/Laravel/public
+      schedule: true</code></pre>
+<p>The Cron job for the site will be defined in the <code>/etc/cron.d</code> folder of the virtual machine.</p>
+<p><a name="ports"></a></p>
+<h3>Ports</h3>
+<p>By default, the following ports are forwarded to your Homestead environment:</p>
+<ul>
+<li><strong>SSH:</strong> 2222 &rarr; Forwards To 22</li>
+<li><strong>HTTP:</strong> 8000 &rarr; Forwards To 80</li>
+<li><strong>HTTPS:</strong> 44300 &rarr; Forwards To 443</li>
+<li><strong>MySQL:</strong> 33060 &rarr; Forwards To 3306</li>
+<li><strong>Postgres:</strong> 54320 &rarr; Forwards To 5432</li>
+</ul>
+<h4>Forwarding Additional Ports</h4>
+<p>If you wish, you may forward additional ports to the Vagrant box, as well as specify their protocol:</p>
+<pre><code>ports:
+    - send: 93000
+      to: 9300
+    - send: 7777
+      to: 777
+      protocol: udp</code></pre>
+<p><a name="network-interfaces"></a></p>
+<h2>Network Interfaces</h2>
+<p>The <code>networks</code> property of the <code>Homestead.yaml</code> configures network interfaces for your Homestead environment. You may configure as many interfaces as necessary:</p>
+<pre><code>networks:
+    - type: "private_network"
+      ip: "192.168.10.20"</code></pre>
+<p>To enable a <a href="https://www.vagrantup.com/docs/networking/public_network.html">bridged</a> interface, configure a <code>bridge</code> setting and change the network type to <code>public_network</code>:</p>
+<pre><code>networks:
+    - type: "public_network"
+      ip: "192.168.10.20"
+      bridge: "en1: Wi-Fi (AirPort)"</code></pre>
+<p>To enable <a href="https://www.vagrantup.com/docs/networking/public_network.html">DHCP</a>, just remove the <code>ip</code> option from your configuration:</p>
+<pre><code>networks:
+    - type: "public_network"
+      bridge: "en1: Wi-Fi (AirPort)"</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="homestead.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = '5.2';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="../../assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="../../build/assets/js/laravel-02364550.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>

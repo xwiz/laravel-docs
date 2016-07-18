@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Facades - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../build/assets/css/laravel-d02b878c.css">
+	<link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="https://laravel.com/" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="facades.html#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/facades">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="facades.html">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/facades">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/facades">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/facades">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Facades</h1>
+<ul>
+<li><a href="facades.html#introduction">Introduction</a></li>
+<li><a href="facades.html#using-facades">Using Facades</a></li>
+<li><a href="facades.html#facade-class-reference">Facade Class Reference</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Facades provide a &quot;static&quot; interface to classes that are available in the application's <a href="container.html">service container</a>. Laravel ships with many facades, and you have probably been using them without even knowing it! Laravel &quot;facades&quot; serve as &quot;static proxies&quot; to underlying classes in the service container, providing the benefit of a terse, expressive syntax while maintaining more testability and flexibility than traditional static methods.</p>
+<p><a name="using-facades"></a></p>
+<h2>Using Facades</h2>
+<p>In the context of a Laravel application, a facade is a class that provides access to an object from the container. The machinery that makes this work is in the <code>Facade</code> class. Laravel's facades, and any custom facades you create, will extend the base <code>Illuminate\Support\Facades\Facade</code> class.</p>
+<p>A facade class only needs to implement a single method: <code>getFacadeAccessor</code>. It's the <code>getFacadeAccessor</code> method's job to define what to resolve from the container. The <code>Facade</code> base class makes use of the <code>__callStatic()</code> magic-method to defer calls from your facade to the resolved object.</p>
+<p>In the example below, a call is made to the Laravel cache system. By glancing at this code, one might assume that the static method <code>get</code> is being called on the <code>Cache</code> class:</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Cache;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showProfile($id)
+    {
+        $user = Cache::get('user:'.$id);
+
+        return view('profile', ['user' =&gt; $user]);
+    }
+}</code></pre>
+<p>Notice that near the top of the file we are &quot;importing&quot; the <code>Cache</code> facade. This facade serves as a proxy to accessing the underlying implementation of the <code>Illuminate\Contracts\Cache\Factory</code> interface. Any calls we make using the facade will be passed to the underlying instance of Laravel's cache service.</p>
+<p>If we look at that <code>Illuminate\Support\Facades\Cache</code> class, you'll see that there is no static method <code>get</code>:</p>
+<pre><code>class Cache extends Facade
+{
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor() { return 'cache'; }
+}</code></pre>
+<p>Instead, the <code>Cache</code> facade extends the base <code>Facade</code> class and defines the method <code>getFacadeAccessor()</code>. Remember, this method's job is to return the name of a service container binding. When a user references any static method on the <code>Cache</code> facade, Laravel resolves the <code>cache</code> binding from the <a href="container.html">service container</a> and runs the requested method (in this case, <code>get</code>) against that object.</p>
+<p><a name="facade-class-reference"></a></p>
+<h2>Facade Class Reference</h2>
+<p>Below you will find every facade and its underlying class. This is a useful tool for quickly digging into the API documentation for a given facade root. The <a href="container.html">service container binding</a> key is also included where applicable.</p>
+<table>
+<thead>
+<tr>
+<th>Facade</th>
+<th>Class</th>
+<th>Service Container Binding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>App</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Foundation/Application.html">Illuminate\Foundation\Application</a></td>
+<td><code>app</code></td>
+</tr>
+<tr>
+<td>Artisan</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Contracts/Console/Kernel.html">Illuminate\Contracts\Console\Kernel</a></td>
+<td><code>artisan</code></td>
+</tr>
+<tr>
+<td>Auth</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Auth/AuthManager.html">Illuminate\Auth\AuthManager</a></td>
+<td><code>auth</code></td>
+</tr>
+<tr>
+<td>Blade</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/View/Compilers/BladeCompiler.html">Illuminate\View\Compilers\BladeCompiler</a></td>
+<td><code>blade.compiler</code></td>
+</tr>
+<tr>
+<td>Bus</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Contracts/Bus/Dispatcher.html">Illuminate\Contracts\Bus\Dispatcher</a></td>
+</tr>
+<tr>
+<td>Cache</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Cache/Repository.html">Illuminate\Cache\Repository</a></td>
+<td><code>cache</code></td>
+</tr>
+<tr>
+<td>Config</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Config/Repository.html">Illuminate\Config\Repository</a></td>
+<td><code>config</code></td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Cookie/CookieJar.html">Illuminate\Cookie\CookieJar</a></td>
+<td><code>cookie</code></td>
+</tr>
+<tr>
+<td>Crypt</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Encryption/Encrypter.html">Illuminate\Encryption\Encrypter</a></td>
+<td><code>encrypter</code></td>
+</tr>
+<tr>
+<td>DB</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Database/DatabaseManager.html">Illuminate\Database\DatabaseManager</a></td>
+<td><code>db</code></td>
+</tr>
+<tr>
+<td>DB (Instance)</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Database/Connection.html">Illuminate\Database\Connection</a></td>
+</tr>
+<tr>
+<td>Event</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Events/Dispatcher.html">Illuminate\Events\Dispatcher</a></td>
+<td><code>events</code></td>
+</tr>
+<tr>
+<td>File</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Filesystem/Filesystem.html">Illuminate\Filesystem\Filesystem</a></td>
+<td><code>files</code></td>
+</tr>
+<tr>
+<td>Gate</td>
+<td><a href="http://laravel.com/api/5.1/Illuminate/Contracts/Auth/Access/Gate.html">Illuminate\Contracts\Auth\Access\Gate</a></td>
+</tr>
+<tr>
+<td>Hash</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Contracts/Hashing/Hasher.html">Illuminate\Contracts\Hashing\Hasher</a></td>
+<td><code>hash</code></td>
+</tr>
+<tr>
+<td>Lang</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Translation/Translator.html">Illuminate\Translation\Translator</a></td>
+<td><code>translator</code></td>
+</tr>
+<tr>
+<td>Log</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Log/Writer.html">Illuminate\Log\Writer</a></td>
+<td><code>log</code></td>
+</tr>
+<tr>
+<td>Mail</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Mail/Mailer.html">Illuminate\Mail\Mailer</a></td>
+<td><code>mailer</code></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Auth/Passwords/PasswordBroker.html">Illuminate\Auth\Passwords\PasswordBroker</a></td>
+<td><code>auth.password</code></td>
+</tr>
+<tr>
+<td>Queue</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Queue/QueueManager.html">Illuminate\Queue\QueueManager</a></td>
+<td><code>queue</code></td>
+</tr>
+<tr>
+<td>Queue (Instance)</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Contracts/Queue/Queue.html">Illuminate\Contracts\Queue\Queue</a></td>
+<td><code>queue</code></td>
+</tr>
+<tr>
+<td>Queue (Base Class)</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Queue/Queue.html">Illuminate\Queue\Queue</a></td>
+</tr>
+<tr>
+<td>Redirect</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Routing/Redirector.html">Illuminate\Routing\Redirector</a></td>
+<td><code>redirect</code></td>
+</tr>
+<tr>
+<td>Redis</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Redis/Database.html">Illuminate\Redis\Database</a></td>
+<td><code>redis</code></td>
+</tr>
+<tr>
+<td>Request</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Http/Request.html">Illuminate\Http\Request</a></td>
+<td><code>request</code></td>
+</tr>
+<tr>
+<td>Response</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Contracts/Routing/ResponseFactory.html">Illuminate\Contracts\Routing\ResponseFactory</a></td>
+</tr>
+<tr>
+<td>Route</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Routing/Router.html">Illuminate\Routing\Router</a></td>
+<td><code>router</code></td>
+</tr>
+<tr>
+<td>Schema</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Database/Schema/Blueprint.html">Illuminate\Database\Schema\Blueprint</a></td>
+</tr>
+<tr>
+<td>Session</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Session/SessionManager.html">Illuminate\Session\SessionManager</a></td>
+<td><code>session</code></td>
+</tr>
+<tr>
+<td>Session (Instance)</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Session/Store.html">Illuminate\Session\Store</a></td>
+</tr>
+<tr>
+<td>Storage</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Contracts/Filesystem/Factory.html">Illuminate\Contracts\Filesystem\Factory</a></td>
+<td><code>filesystem</code></td>
+</tr>
+<tr>
+<td>URL</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Routing/UrlGenerator.html">Illuminate\Routing\UrlGenerator</a></td>
+<td><code>url</code></td>
+</tr>
+<tr>
+<td>Validator</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Validation/Factory.html">Illuminate\Validation\Factory</a></td>
+<td><code>validator</code></td>
+</tr>
+<tr>
+<td>Validator (Instance)</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/Validation/Validator.html">Illuminate\Validation\Validator</a></td>
+</tr>
+<tr>
+<td>View</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/View/Factory.html">Illuminate\View\Factory</a></td>
+<td><code>view</code></td>
+</tr>
+<tr>
+<td>View (Instance)</td>
+<td><a href="http://laravel.com/api/5.2/Illuminate/View/View.html">Illuminate\View\View</a></td>
+</tr>
+</tbody>
+</table>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="facades.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = '5.2';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="../../assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="../../build/assets/js/laravel-02364550.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>

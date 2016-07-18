@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Installation - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../build/assets/css/laravel-d02b878c.css">
+	<link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="https://laravel.com/" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="index.html#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.2">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Installation</h1>
+<ul>
+<li><a href="index.html#installation">Installation</a>
+<ul>
+<li><a href="index.html#server-requirements">Server Requirements</a></li>
+<li><a href="index.html#installing-laravel">Installing Laravel</a></li>
+<li><a href="index.html#configuration">Configuration</a></li>
+</ul></li>
+</ul>
+<p><a name="installation"></a></p>
+<h2>Installation</h2>
+<p><a name="server-requirements"></a></p>
+<h3>Server Requirements</h3>
+<p>The Laravel framework has a few system requirements. Of course, all of these requirements are satisfied by the <a href="homestead.html">Laravel Homestead</a> virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.</p>
+<p>However, if you are not using Homestead, you will need to make sure your server meets the following requirements:</p>
+<div class="content-list">
+<ul>
+<li>PHP &gt;= 5.5.9</li>
+<li>OpenSSL PHP Extension</li>
+<li>PDO PHP Extension</li>
+<li>Mbstring PHP Extension</li>
+<li>Tokenizer PHP Extension</li>
+</ul>
+</div>
+<p><a name="installing-laravel"></a></p>
+<h3>Installing Laravel</h3>
+<p>Laravel utilizes <a href="http://getcomposer.org">Composer</a> to manage its dependencies. So, before using Laravel, make sure you have Composer installed on your machine.</p>
+<h4>Via Laravel Installer</h4>
+<p>First, download the Laravel installer using Composer:</p>
+<pre><code>composer global require "laravel/installer"</code></pre>
+<p>Make sure to place the <code>~/.composer/vendor/bin</code> directory (or the equivalent directory for your OS) in your PATH so the <code>laravel</code> executable can be located by your system.</p>
+<p>Once installed, the <code>laravel new</code> command will create a fresh Laravel installation in the directory you specify. For instance, <code>laravel new blog</code> will create a directory named <code>blog</code> containing a fresh Laravel installation with all of Laravel's dependencies already installed. This method of installation is much faster than installing via Composer:</p>
+<pre><code>laravel new blog</code></pre>
+<h4>Via Composer Create-Project</h4>
+<p>Alternatively, you may also install Laravel by issuing the Composer <code>create-project</code> command in your terminal:</p>
+<pre><code>composer create-project --prefer-dist laravel/laravel blog</code></pre>
+<p><a name="configuration"></a></p>
+<h3>Configuration</h3>
+<p>After installation, you should configure your application's document / web root to the <code>public</code> directory.</p>
+<p>All of the configuration files for the Laravel framework are stored in the <code>config</code> directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.</p>
+<h4>Directory Permissions</h4>
+<p>After installing Laravel, you may need to configure some permissions. Directories within the <code>storage</code> and the <code>bootstrap/cache</code> directories should be writable by your web server or Laravel will not run. If you are using the <a href="homestead.html">Homestead</a> virtual machine, these permissions should already be set.</p>
+<h4>Application Key</h4>
+<p>The next thing you should do after installing Laravel is set your application key to a random string. If you installed Laravel via Composer or the Laravel installer, this key has already been set for you by the <code>php artisan key:generate</code> command. Typically, this string should be 32 characters long. The key can be set in the <code>.env</code> environment file. If you have not renamed the <code>.env.example</code> file to <code>.env</code>, you should do that now. <strong>If the application key is not set, your user sessions and other encrypted data will not be secure!</strong></p>
+<h4>Additional Configuration</h4>
+<p>Laravel needs almost no other configuration out of the box. You are free to get started developing! However, you may wish to review the <code>config/app.php</code> file and its documentation. It contains several options such as <code>timezone</code> and <code>locale</code> that you may wish to change according to your application.</p>
+<p>You may also want to configure a few additional components of Laravel, such as:</p>
+<ul>
+<li><a href="cache.html#configuration">Cache</a></li>
+<li><a href="database.html#configuration">Database</a></li>
+<li><a href="session.html#configuration">Session</a></li>
+</ul>
+<p>Once Laravel is installed, you should also <a href="configuration.html#environment-configuration">configure your local environment</a>.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = '5.2';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="../../assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="../../build/assets/js/laravel-02364550.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>

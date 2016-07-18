@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Task Scheduling - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../build/assets/css/laravel-d02b878c.css">
+	<link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="https://laravel.com/" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="scheduling.html#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/scheduling">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="scheduling.html">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/scheduling">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/scheduling">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/scheduling">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Task Scheduling</h1>
+<ul>
+<li><a href="scheduling.html#introduction">Introduction</a></li>
+<li><a href="scheduling.html#defining-schedules">Defining Schedules</a>
+<ul>
+<li><a href="scheduling.html#schedule-frequency-options">Schedule Frequency Options</a></li>
+<li><a href="scheduling.html#preventing-task-overlaps">Preventing Task Overlaps</a></li>
+</ul></li>
+<li><a href="scheduling.html#task-output">Task Output</a></li>
+<li><a href="scheduling.html#task-hooks">Task Hooks</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>In the past, developers have generated a Cron entry for each task they need to schedule. However, this is a headache. Your task schedule is no longer in source control, and you must SSH into your server to add the Cron entries. The Laravel command scheduler allows you to fluently and expressively define your command schedule within Laravel itself, and only a single Cron entry is needed on your server.</p>
+<p>Your task schedule is defined in the <code>app/Console/Kernel.php</code> file's <code>schedule</code> method. To help you get started, a simple example is included with the method. You are free to add as many scheduled tasks as you wish to the <code>Schedule</code> object.</p>
+<h3>Starting The Scheduler</h3>
+<p>Here is the only Cron entry you need to add to your server:</p>
+<pre><code>* * * * * php /path/to/artisan schedule:run &gt;&gt; /dev/null 2&gt;&amp;1</code></pre>
+<p>This Cron will call the Laravel command scheduler every minute. Then, Laravel evaluates your scheduled tasks and runs the tasks that are due.</p>
+<p><a name="defining-schedules"></a></p>
+<h2>Defining Schedules</h2>
+<p>You may define all of your scheduled tasks in the <code>schedule</code> method of the <code>App\Console\Kernel</code> class. To get started, let's look at an example of scheduling a task. In this example, we will schedule a <code>Closure</code> to be called every day at midnight. Within the <code>Closure</code> we will execute a database query to clear a table:</p>
+<pre><code>&lt;?php
+
+namespace App\Console;
+
+use DB;
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+
+class Kernel extends ConsoleKernel
+{
+    /**
+     * The Artisan commands provided by your application.
+     *
+     * @var array
+     */
+    protected $commands = [
+        \App\Console\Commands\Inspire::class,
+    ];
+
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule-&gt;call(function () {
+            DB::table('recent_users')-&gt;delete();
+        })-&gt;daily();
+    }
+}</code></pre>
+<p>In addition to scheduling <code>Closure</code> calls, you may also schedule <a href="artisan.html">Artisan commands</a> and operating system commands. For example, you may use the <code>command</code> method to schedule an Artisan command:</p>
+<pre><code>$schedule-&gt;command('emails:send --force')-&gt;daily();</code></pre>
+<p>The <code>exec</code> command may be used to issue a command to the operating system:</p>
+<pre><code>$schedule-&gt;exec('node /home/forge/script.js')-&gt;daily();</code></pre>
+<p><a name="schedule-frequency-options"></a></p>
+<h3>Schedule Frequency Options</h3>
+<p>Of course, there are a variety of schedules you may assign to your task:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-&gt;cron('* * * * * *');</code></td>
+<td>Run the task on a custom Cron schedule</td>
+</tr>
+<tr>
+<td><code>-&gt;everyMinute();</code></td>
+<td>Run the task every minute</td>
+</tr>
+<tr>
+<td><code>-&gt;everyFiveMinutes();</code></td>
+<td>Run the task every five minutes</td>
+</tr>
+<tr>
+<td><code>-&gt;everyTenMinutes();</code></td>
+<td>Run the task every ten minutes</td>
+</tr>
+<tr>
+<td><code>-&gt;everyThirtyMinutes();</code></td>
+<td>Run the task every thirty minutes</td>
+</tr>
+<tr>
+<td><code>-&gt;hourly();</code></td>
+<td>Run the task every hour</td>
+</tr>
+<tr>
+<td><code>-&gt;daily();</code></td>
+<td>Run the task every day at midnight</td>
+</tr>
+<tr>
+<td><code>-&gt;dailyAt('13:00');</code></td>
+<td>Run the task every day at 13:00</td>
+</tr>
+<tr>
+<td><code>-&gt;twiceDaily(1, 13);</code></td>
+<td>Run the task daily at 1:00 &amp; 13:00</td>
+</tr>
+<tr>
+<td><code>-&gt;weekly();</code></td>
+<td>Run the task every week</td>
+</tr>
+<tr>
+<td><code>-&gt;monthly();</code></td>
+<td>Run the task every month</td>
+</tr>
+<tr>
+<td><code>-&gt;monthlyOn(4, '15:00');</code></td>
+<td>Run the task every month on the 4th at 15:00</td>
+</tr>
+<tr>
+<td><code>-&gt;quarterly();</code></td>
+<td>Run the task every quarter</td>
+</tr>
+<tr>
+<td><code>-&gt;yearly();</code></td>
+<td>Run the task every year</td>
+</tr>
+<tr>
+<td><code>-&gt;timezone('America/New_York');</code></td>
+<td>Set the timezone</td>
+</tr>
+</tbody>
+</table>
+<p>These methods may be combined with additional constraints to create even more finely tuned schedules that only run on certain days of the week. For example, to schedule a command to run weekly on Monday:</p>
+<pre><code>// Run once per week on Monday at 1 PM...
+$schedule-&gt;call(function () {
+    //
+})-&gt;weekly()-&gt;mondays()-&gt;at('13:00');
+
+// Run hourly from 8 AM to 5 PM on weekdays...
+$schedule-&gt;command('foo')
+          -&gt;weekdays()
+          -&gt;hourly()
+          -&gt;timezone('America/Chicago')
+          -&gt;when(function () {
+                return date('H') &gt;= 8 &amp;&amp; date('H') &lt;= 17;
+          });</code></pre>
+<p>Below is a list of the additional schedule constraints:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-&gt;weekdays();</code></td>
+<td>Limit the task to weekdays</td>
+</tr>
+<tr>
+<td><code>-&gt;sundays();</code></td>
+<td>Limit the task to Sunday</td>
+</tr>
+<tr>
+<td><code>-&gt;mondays();</code></td>
+<td>Limit the task to Monday</td>
+</tr>
+<tr>
+<td><code>-&gt;tuesdays();</code></td>
+<td>Limit the task to Tuesday</td>
+</tr>
+<tr>
+<td><code>-&gt;wednesdays();</code></td>
+<td>Limit the task to Wednesday</td>
+</tr>
+<tr>
+<td><code>-&gt;thursdays();</code></td>
+<td>Limit the task to Thursday</td>
+</tr>
+<tr>
+<td><code>-&gt;fridays();</code></td>
+<td>Limit the task to Friday</td>
+</tr>
+<tr>
+<td><code>-&gt;saturdays();</code></td>
+<td>Limit the task to Saturday</td>
+</tr>
+<tr>
+<td><code>-&gt;when(Closure);</code></td>
+<td>Limit the task based on a truth test</td>
+</tr>
+</tbody>
+</table>
+<h4>Truth Test Constraints</h4>
+<p>The <code>when</code> method may be used to limit the execution of a task based on the result of a given truth test. In other words, if the given <code>Closure</code> returns <code>true</code>, the task will execute as long as no other constraining conditions prevent the task from running:</p>
+<pre><code>$schedule-&gt;command('emails:send')-&gt;daily()-&gt;when(function () {
+    return true;
+});</code></pre>
+<p>The <code>skip</code> method may be seen as the inverse of <code>when</code>. If the <code>skip</code> method returns <code>true</code>, the scheduled task will not be executed:</p>
+<pre><code>$schedule-&gt;command('emails:send')-&gt;daily()-&gt;skip(function () {
+    return true;
+});</code></pre>
+<p>When using chained <code>when</code> methods, the scheduled command will only execute if all <code>when</code> conditions return <code>true</code>.</p>
+<p><a name="preventing-task-overlaps"></a></p>
+<h3>Preventing Task Overlaps</h3>
+<p>By default, scheduled tasks will be run even if the previous instance of the task is still running. To prevent this, you may use the <code>withoutOverlapping</code> method:</p>
+<pre><code>$schedule-&gt;command('emails:send')-&gt;withoutOverlapping();</code></pre>
+<p>In this example, the <code>emails:send</code> <a href="artisan.html">Artisan command</a> will be run every minute if it is not already running. The <code>withoutOverlapping</code> method is especially useful if you have tasks that vary drastically in their execution time, preventing you from predicting exactly how long a given task will take.</p>
+<p><a name="task-output"></a></p>
+<h2>Task Output</h2>
+<p>The Laravel scheduler provides several convenient methods for working with the output generated by scheduled tasks. First, using the <code>sendOutputTo</code> method, you may send the output to a file for later inspection:</p>
+<pre><code>$schedule-&gt;command('emails:send')
+         -&gt;daily()
+         -&gt;sendOutputTo($filePath);</code></pre>
+<p>If you would like to append the output to a given file, you may use the <code>appendOutputTo</code> method:</p>
+<pre><code>$schedule-&gt;command('emails:send')
+         -&gt;daily()
+         -&gt;appendOutputTo($filePath);</code></pre>
+<p>Using the <code>emailOutputTo</code> method, you may e-mail the output to an e-mail address of your choice. Note that the output must first be sent to a file using the <code>sendOutputTo</code> method. Also, before e-mailing the output of a task, you should configure Laravel's <a href="mail.html">e-mail services</a>:</p>
+<pre><code>$schedule-&gt;command('foo')
+         -&gt;daily()
+         -&gt;sendOutputTo($filePath)
+         -&gt;emailOutputTo(<a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="785f1e1717381d00191508141d561b1715">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The <code>emailOutputTo</code> and <code>sendOutputTo</code> methods are exclusive to the <code>command</code> method and are not supported for <code>call</code>.</p>
+</blockquote>
+<p><a name="task-hooks"></a></p>
+<h2>Task Hooks</h2>
+<p>Using the <code>before</code> and <code>after</code> methods, you may specify code to be executed before and after the scheduled task is complete:</p>
+<pre><code>$schedule-&gt;command('emails:send')
+         -&gt;daily()
+         -&gt;before(function () {
+             // Task is about to start...
+         })
+         -&gt;after(function () {
+             // Task is complete...
+         });</code></pre>
+<h4>Pinging URLs</h4>
+<p>Using the <code>pingBefore</code> and <code>thenPing</code> methods, the scheduler can automatically ping a given URL before or after a task is complete. This method is useful for notifying an external service, such as <a href="https://envoyer.io">Laravel Envoyer</a>, that your scheduled task is commencing or complete:</p>
+<pre><code>$schedule-&gt;command('emails:send')
+         -&gt;daily()
+         -&gt;pingBefore($url)
+         -&gt;thenPing($url);</code></pre>
+<p>Using either the <code>pingBefore($url)</code> or <code>thenPing($url)</code> feature requires the Guzzle HTTP library. You can add Guzzle to your project by adding the following line to your <code>composer.json</code> file:</p>
+<pre><code>"guzzlehttp/guzzle": "~5.3|~6.0"</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="scheduling.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = '5.2';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="../../assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="../../build/assets/js/laravel-02364550.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>

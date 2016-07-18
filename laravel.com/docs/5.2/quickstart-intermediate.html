@@ -1,0 +1,1099 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Intermediate Task List - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../build/assets/css/laravel-d02b878c.css">
+	<link rel="apple-touch-icon" href="https://laravel.com/favicon.png">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="https://laravel.com/" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="quickstart-intermediate.html#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/master/quickstart-intermediate">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="quickstart-intermediate.html">5.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.1/quickstart-intermediate">5.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/5.0/quickstart-intermediate">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="https://laravel.com/docs/4.2/quickstart-intermediate">4.2</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+
+	<div class="brand">
+		<a href="https://laravel.com/">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="https://laravel.com/">Home</a></li>
+		<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+<li><a href="https://laravel.com/api/5.2">API Documentation</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="valet.html">Valet</a></li>
+</ul></li>
+<li>Tutorials
+<ul>
+<li><a href="quickstart.html">Basic Task List</a></li>
+<li><a href="quickstart-intermediate.html">Intermediate Task List</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+<li><a href="blade.html">Blade Templates</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="authorization.html">Authorization</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="envoy.html">SSH Tasks</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="migrations.html">Migrations</a></li>
+<li><a href="seeding.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<div id="search">
+		<div id="search-wrapper">
+			<input placeholder="" type="text" id="search-input" />
+			<i id="cross" class="icon"></i>
+		</div>
+	</div>
+
+	<article>
+		<h1>Intermediate Task List</h1>
+<ul>
+<li><a href="quickstart-intermediate.html#introduction">Introduction</a></li>
+<li><a href="quickstart-intermediate.html#installation">Installation</a></li>
+<li><a href="quickstart-intermediate.html#prepping-the-database">Prepping The Database</a>
+<ul>
+<li><a href="quickstart-intermediate.html#database-migrations">Database Migrations</a></li>
+<li><a href="quickstart-intermediate.html#eloquent-models">Eloquent Models</a></li>
+<li><a href="quickstart-intermediate.html#eloquent-relationships">Eloquent Relationships</a></li>
+</ul></li>
+<li><a href="quickstart-intermediate.html#routing">Routing</a>
+<ul>
+<li><a href="quickstart-intermediate.html#displaying-a-view">Displaying A View</a></li>
+<li><a href="quickstart-intermediate.html#authentication-routing">Authentication</a></li>
+<li><a href="quickstart-intermediate.html#the-task-controller">The Task Controller</a></li>
+</ul></li>
+<li><a href="quickstart-intermediate.html#building-layouts-and-views">Building Layouts &amp; Views</a>
+<ul>
+<li><a href="quickstart-intermediate.html#defining-the-layout">Defining The Layout</a></li>
+<li><a href="quickstart-intermediate.html#defining-the-child-view">Defining The Child View</a></li>
+</ul></li>
+<li><a href="quickstart-intermediate.html#adding-tasks">Adding Tasks</a>
+<ul>
+<li><a href="quickstart-intermediate.html#validation">Validation</a></li>
+<li><a href="quickstart-intermediate.html#creating-the-task">Creating The Task</a></li>
+</ul></li>
+<li><a href="quickstart-intermediate.html#displaying-existing-tasks">Displaying Existing Tasks</a>
+<ul>
+<li><a href="quickstart-intermediate.html#dependency-injection">Dependency Injection</a></li>
+<li><a href="quickstart-intermediate.html#displaying-the-tasks">Displaying The Tasks</a></li>
+</ul></li>
+<li><a href="quickstart-intermediate.html#deleting-tasks">Deleting Tasks</a>
+<ul>
+<li><a href="quickstart-intermediate.html#adding-the-delete-button">Adding The Delete Button</a></li>
+<li><a href="quickstart-intermediate.html#route-model-binding">Route Model Binding</a></li>
+<li><a href="quickstart-intermediate.html#authorization">Authorization</a></li>
+<li><a href="quickstart-intermediate.html#deleting-the-task">Deleting The Task</a></li>
+</ul></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>This quickstart guide provides an intermediate introduction to the Laravel framework and includes content on database migrations, the Eloquent ORM, routing, authentication, authorization, dependency injection, validation, views, and Blade templates. This is a great starting point if you are familiar with the basics of the Laravel framework or PHP frameworks in general.</p>
+<p>To sample a basic selection of Laravel features, we will build a task list we can use to track all of the tasks we want to accomplish. In other words, the typical &quot;to-do&quot; list example. In contrast to the &quot;basic&quot; quickstart, this tutorial will allow users to create accounts and authenticate with the application. The complete, finished source code for this project is <a href="https://github.com/laravel/quickstart-intermediate">available on GitHub</a>.</p>
+<p><a name="installation"></a></p>
+<h2>Installation</h2>
+<h4>Installing Laravel</h4>
+<p>Of course, first you will need a fresh installation of the Laravel framework. You may use the <a href="homestead.html">Homestead virtual machine</a> or the local PHP environment of your choice to run the framework. Once your local environment is ready, you may install the Laravel framework using Composer:</p>
+<pre><code>composer create-project laravel/laravel quickstart --prefer-dist</code></pre>
+<h4>Installing The Quickstart (Optional)</h4>
+<p>You're free to just read along for the remainder of this quickstart; however, if you would like to download the source code for this quickstart and run it on your local machine, you may clone its Git repository and install its dependencies:</p>
+<pre><code>git clone https://github.com/laravel/quickstart-intermediate quickstart
+cd quickstart
+composer install
+php artisan migrate</code></pre>
+<p>For more complete documentation on building a local Laravel development environment, check out the full <a href="homestead.html">Homestead</a> and <a href="installation.html">installation</a> documentation.</p>
+<p><a name="prepping-the-database"></a></p>
+<h2>Prepping The Database</h2>
+<p><a name="database-migrations"></a></p>
+<h3>Database Migrations</h3>
+<p>First, let's use a migration to define a database table to hold all of our tasks. Laravel's database migrations provide an easy way to define your database table structure and modifications using fluent, expressive PHP code. Instead of telling your team members to manually add columns to their local copy of the database, your teammates can simply run the migrations you push into source control.</p>
+<h4>The <code>users</code> Table</h4>
+<p>Since we are going to allow users to create their accounts within the application, we will need a table to store all of our users. Thankfully, Laravel already ships with a migration to create a basic <code>users</code> table, so we do not need to manually generate one. The default migration for the <code>users</code> table is located in the <code>database/migrations</code> directory.</p>
+<h4>The <code>tasks</code> Table</h4>
+<p>Next, let's build a database table that will hold all of our tasks. The <a href="artisan.html">Artisan CLI</a> can be used to generate a variety of classes and will save you a lot of typing as you build your Laravel projects. In this case, let's use the <code>make:migration</code> command to generate a new database migration for our <code>tasks</code> table:</p>
+<pre><code>php artisan make:migration create_tasks_table --create=tasks</code></pre>
+<p>The migration will be placed in the <code>database/migrations</code> directory of your project. As you may have noticed, the <code>make:migration</code> command already added an auto-incrementing ID and timestamps to the migration file. Let's edit this file and add an additional <code>string</code> column for the name of our tasks, as well as a <code>user_id</code> column which will link our <code>tasks</code> and <code>users</code> tables:</p>
+<pre><code>&lt;?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateTasksTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('tasks', function (Blueprint $table) {
+            $table-&gt;increments('id');
+            $table-&gt;integer('user_id')-&gt;index();
+            $table-&gt;string('name');
+            $table-&gt;timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('tasks');
+    }
+}</code></pre>
+<p>To run our migrations, we will use the <code>migrate</code> Artisan command. If you are using Homestead, you should run this command from within your virtual machine, since your host machine will not have direct access to the database:</p>
+<pre><code>php artisan migrate</code></pre>
+<p>This command will create all of our database tables. If you inspect the database tables using the database client of your choice, you should see new <code>tasks</code> and <code>users</code> tables which contains the columns defined in our migration. Next, we're ready to define our Eloquent ORM models!</p>
+<p><a name="eloquent-models"></a></p>
+<h3>Eloquent Models</h3>
+<p><a href="eloquent.html">Eloquent</a> is Laravel's default ORM (object-relational mapper). Eloquent makes it painless to retrieve and store data in your database using clearly defined &quot;models&quot;. Usually, each Eloquent model corresponds directly with a single database table.</p>
+<h4>The <code>User</code> Model</h4>
+<p>First, we need a model that corresponds to our <code>users</code> database table. However, if you look in the <code>app</code> directory of your project, you will see that Laravel already ships with a <code>User</code> model, so we do not need to generate one manually.</p>
+<h4>The <code>Task</code> Model</h4>
+<p>So, let's define a <code>Task</code> model that corresponds to our <code>tasks</code> database table we just created. Again, we can use an Artisan command to generate this model. In this case, we'll use the <code>make:model</code> command:</p>
+<pre><code>php artisan make:model Task</code></pre>
+<p>The model will be placed in the <code>app</code> directory of your application. By default, the model class is empty. We do not have to explicitly tell the Eloquent model which table it corresponds to because it will assume the database table is the plural form of the model name. So, in this case, the <code>Task</code> model is assumed to correspond with the <code>tasks</code> database table.</p>
+<p>Let's add a few things to this model. First, we will state that the <code>name</code> attribute on the model should be &quot;mass-assignable&quot;. This will allow us to fill the <code>name</code> attribute when using Eloquent's <code>create</code> method:</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Task extends Model
+{
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name'];
+}</code></pre>
+<p>We'll learn more about how to use Eloquent models as we add routes to our application. Of course, feel free to consult the <a href="eloquent.html">complete Eloquent documentation</a> for more information.</p>
+<p><a name="eloquent-relationships"></a></p>
+<h3>Eloquent Relationships</h3>
+<p>Now that our models are defined, we need to link them. For example, our <code>User</code> can have many <code>Task</code> instances, while a <code>Task</code> is assigned to a single <code>User</code>. Defining a relationship will allow us to fluently walk through our relations like so:</p>
+<pre><code>$user = App\User::find(1);
+
+foreach ($user-&gt;tasks as $task) {
+    echo $task-&gt;name;
+}</code></pre>
+<h4>The <code>tasks</code> Relationship</h4>
+<p>First, let's define the <code>tasks</code> relationship on our <code>User</code> model. Eloquent relationships are defined as methods on models. Eloquent supports several different types of relationships, so be sure to consult the <a href="eloquent-relationships.html">full Eloquent documentation</a> for more information. In this case, we will define a <code>tasks</code> function on the <code>User</code> model which calls the <code>hasMany</code> method provided by Eloquent:</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    // Other Eloquent Properties...
+
+    /**
+     * Get all of the tasks for the user.
+     */
+    public function tasks()
+    {
+        return $this-&gt;hasMany(Task::class);
+    }
+}</code></pre>
+<h4>The <code>user</code> Relationship</h4>
+<p>Next, let's define the <code>user</code> relationship on the <code>Task</code> model. Again, we will define the relationship as a method on the model. In this case, we will use the <code>belongsTo</code> method provided by Eloquent to define the relationship:</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use App\User;
+use Illuminate\Database\Eloquent\Model;
+
+class Task extends Model
+{
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name'];
+
+    /**
+     * Get the user that owns the task.
+     */
+    public function user()
+    {
+        return $this-&gt;belongsTo(User::class);
+    }
+}</code></pre>
+<p>Wonderful! Now that our relationships are defined, we can start building our controllers!</p>
+<p><a name="routing"></a></p>
+<h2>Routing</h2>
+<p>In the <a href="quickstart.html">basic version</a> of our task list application, we defined all of our logic using Closures within our <code>routes.php</code> file. For the majority of this application, we will use <a href="controllers.html">controllers</a> to organize our routes. Controllers will allow us to break out HTTP request handling logic across multiple files for better organization.</p>
+<p><a name="displaying-a-view"></a></p>
+<h3>Displaying A View</h3>
+<p>We will have a single route that uses a Closure: our <code>/</code> route, which will simply be a landing page for application guests. So, let's fill out our <code>/</code> route. From this route, we want to render an HTML template that contains the &quot;welcome&quot; page:</p>
+<p>In Laravel, all HTML templates are stored in the <code>resources/views</code> directory, and we can use the <code>view</code> helper to return one of these templates from our route:</p>
+<pre><code>Route::get('/', function () {
+    return view('welcome');
+});</code></pre>
+<p>Of course, we need to actually define this view. We'll do that in a bit!</p>
+<p><a name="authentication-routing"></a></p>
+<h3>Authentication</h3>
+<p>Remember, we also need to let users create accounts and login to our application. Typically, it can be a tedious task to build an entire authentication layer into a web application. However, since it is such a common need, Laravel attempts to make this procedure totally painless.</p>
+<p>First, notice that there is already a <code>app/Http/Controllers/Auth/AuthController</code> included in your Laravel application. This controller uses a special <code>AuthenticatesAndRegistersUsers</code> trait which contains all of the necessary logic to create and authenticate users.</p>
+<h4>Authentication Routes &amp; Views</h4>
+<p>So, what's left for us to do? Well, we still need to create the registration and login templates as well as define the routes to point to the authentication controller. We can do all of this using the <code>make:auth</code> Artisan command:</p>
+<pre><code>php artisan make:auth</code></pre>
+<blockquote>
+<p><strong>Note:</strong> If you would like to view complete examples for these views, remember that the entire application's source code is <a href="https://github.com/laravel/quickstart-intermediate">available on GitHub</a>.</p>
+</blockquote>
+<p>Now, all we have to do is add the authentication routes to our routes file. We can do this using the <code>auth</code> method on the <code>Route</code> facade, which will register all of the routes we need for registration, login, and password reset:</p>
+<pre><code>// Authentication Routes...
+Route::auth();</code></pre>
+<p>Once the <code>auth</code> routes are registered, verify that the <code>$redirectTo</code> property on the <code>app/Http/Controllers/Auth/AuthController</code> controller is set to '/tasks':</p>
+<pre><code>protected $redirectTo = '/tasks';</code></pre>
+<p>It is also necessary to update the <code>app/Http/Middleware/RedirectIfAuthenticated.php</code> file with the proper redirect path:</p>
+<pre><code>return redirect('/tasks');</code></pre>
+<p><a name="the-task-controller"></a></p>
+<h3>The Task Controller</h3>
+<p>Since we know we're going to need to retrieve and store tasks, let's create a <code>TaskController</code> using the Artisan CLI, which will place the new controller in the <code>app/Http/Controllers</code> directory:</p>
+<pre><code>php artisan make:controller TaskController</code></pre>
+<p>Now that the controller has been generated, let's go ahead and stub out some routes in our <code>app/Http/routes.php</code> file to point to the controller:</p>
+<pre><code>Route::get('/tasks', <a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="8bacdfeaf8e0c8e4e5fff9e4e7e7eef9cbe2e5efeef3">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>');
+Route::post('/task', <a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="c5e291a4b6ae86aaabb1b7aaa9a9a0b785b6b1aab7a0">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>');
+Route::delete('/task/{task}', <a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="eec9ba8f9d85ad81809a9c8182828b9cae8a8b9d9a9c8197">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>');</code></pre>
+<h4>Authenticating All Task Routes</h4>
+<p>For this application, we want all of our task routes to require an authenticated user. In other words, the user must be &quot;logged into&quot; the application in order to create a task. So, we need to restrict access to our task routes to only authenticated users. Laravel makes this a cinch using <a href="middleware.html">middleware</a>.</p>
+<p>To require an authenticated users for all actions on the controller, we can add a call to the <code>middleware</code> method from the controller's constructor. All available route middleware are defined in the <code>app/Http/Kernel.php</code> file. In this case, we want to assign the <code>auth</code> middleware to all actions on the controller:</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class TaskController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this-&gt;middleware('auth');
+    }
+}</code></pre>
+<p><a name="building-layouts-and-views"></a></p>
+<h2>Building Layouts &amp; Views</h2>
+<p>The primary part of this application only has a single view which contains a form for adding new tasks as well as a listing of all current tasks. To help you visualize the view, here is a screenshot of the finished application with basic Bootstrap CSS styling applied:</p>
+<p><img src="../../assets/img/quickstart/basic-overview.png" alt="Application Image" /></p>
+<p><a name="defining-the-layout"></a></p>
+<h3>Defining The Layout</h3>
+<p>Almost all web applications share the same layout across pages. For example, this application has a top navigation bar that would be typically present on every page (if we had more than one). Laravel makes it easy to share these common features across every page using Blade <strong>layouts</strong>.</p>
+<p>As we discussed earlier, all Laravel views are stored in <code>resources/views</code>. So, let's define a new layout view in <code>resources/views/layouts/app.blade.php</code>. The <code>.blade.php</code> extension instructs the framework to use the <a href="blade.html">Blade templating engine</a> to render the view. Of course, you may use plain PHP templates with Laravel. However, Blade provides convenient short-cuts for writing cleaner, terse templates.</p>
+<p>Our <code>app.blade.php</code> view should look like the following:</p>
+<pre><code>&lt;!-- resources/views/layouts/app.blade.php --&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Laravel Quickstart - Intermediate&lt;/title&gt;
+
+        &lt;!-- CSS And JavaScript --&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;nav class="navbar navbar-default"&gt;
+                &lt;!-- Navbar Contents --&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+
+        @yield('content')
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Note the <code>@yield('content')</code> portion of the layout. This is a special Blade directive that specifies where all child pages that extend the layout can inject their own content. Next, let's define the child view that will use this layout and provide its primary content.</p>
+<p><a name="defining-the-child-view"></a></p>
+<h3>Defining The Child View</h3>
+<p>Great, our application layout is finished. Next, we need to define a view that contains a form to create a new task as well as a table that lists all existing tasks. Let's define this view in <code>resources/views/tasks/index.blade.php</code>, which will correspond to the <code>index</code> method in our <code>TaskController</code>.</p>
+<p>We'll skip over some of the Bootstrap CSS boilerplate and only focus on the things that matter. Remember, you can download the full source for this application on <a href="https://github.com/laravel/quickstart-intermediate">GitHub</a>:</p>
+<pre><code>&lt;!-- resources/views/tasks/index.blade.php --&gt;
+
+@extends('layouts.app')
+
+@section('content')
+
+    &lt;!-- Bootstrap Boilerplate... --&gt;
+
+    &lt;div class="panel-body"&gt;
+        &lt;!-- Display Validation Errors --&gt;
+        @include('common.errors')
+
+        &lt;!-- New Task Form --&gt;
+        &lt;form action="{{ url('task') }}" method="POST" class="form-horizontal"&gt;
+            {{ csrf_field() }}
+
+            &lt;!-- Task Name --&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="task-name" class="col-sm-3 control-label"&gt;Task&lt;/label&gt;
+
+                &lt;div class="col-sm-6"&gt;
+                    &lt;input type="text" name="name" id="task-name" class="form-control"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;!-- Add Task Button --&gt;
+            &lt;div class="form-group"&gt;
+                &lt;div class="col-sm-offset-3 col-sm-6"&gt;
+                    &lt;button type="submit" class="btn btn-default"&gt;
+                        &lt;i class="fa fa-plus"&gt;&lt;/i&gt; Add Task
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;!-- TODO: Current Tasks --&gt;
+@endsection</code></pre>
+<h4>A Few Notes Of Explanation</h4>
+<p>Before moving on, let's talk about this template a bit. First, the <code>@extends</code> directive informs Blade that we are using the layout we defined at <code>resources/views/layouts/app.blade.php</code>. All of the content between <code>@section('content')</code> and <code>@endsection</code> will be injected into the location of the <code>@yield('content')</code> directive within the <code>app.blade.php</code> layout.</p>
+<p>The <code>@include('common.errors')</code> directive will load the template located at <code>resources/views/common/errors.blade.php</code>. We haven't defined this template, but we will soon!</p>
+<p>Now we have defined a basic layout and view for our application. Let's go ahead and return this view from the <code>index</code> method of our <code>TaskController</code>:</p>
+<pre><code>/**
+ * Display a list of all of the user's task.
+ *
+ * @param  Request  $request
+ * @return Response
+ */
+public function index(Request $request)
+{
+    return view('tasks.index');
+}</code></pre>
+<p>Next, we're ready to add code to our <code>POST /task</code> route's controller method to handle the incoming form input and add a new task to the database.</p>
+<p><a name="adding-tasks"></a></p>
+<h2>Adding Tasks</h2>
+<p><a name="validation"></a></p>
+<h3>Validation</h3>
+<p>Now that we have a form in our view, we need to add code to our <code><a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="de8abfadb59db1b0aaacb1b2b2bbac9eadaab1acbb">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></code> method to validate the incoming form input and create a new task. First, let's validate the input.</p>
+<p>For this form, we will make the <code>name</code> field required and state that it must contain less than <code>255</code> characters. If the validation fails, we want to redirect the user back to the <code>/tasks</code> URL, as well as flash the old input and errors into the <a href="session.html">session</a>:</p>
+<pre><code>/**
+ * Create a new task.
+ *
+ * @param  Request  $request
+ * @return Response
+ */
+public function store(Request $request)
+{
+    $this-&gt;validate($request, [
+        'name' =&gt; 'required|max:255',
+    ]);
+
+    // Create The Task...
+}</code></pre>
+<p>If you followed along with the <a href="quickstart.html">basic quickstart</a>, you'll notice this validation code looks quite a bit different! Since we are in a controller, we can leverage the convenience of the <code>ValidatesRequests</code> trait that is included in the base Laravel controller. This trait exposes a simple <code>validate</code> method which accepts a request and an array of validation rules.</p>
+<p>We don't even have to manually determine if the validation failed or do manual redirection. If the validation fails for the given rules, the user will automatically be redirected back to where they came from and the errors will automatically be flashed to the session. Nice!</p>
+<h4>The <code>$errors</code> Variable</h4>
+<p>Remember that we used the <code>@include('common.errors')</code> directive within our view to render the form's validation errors. The <code>common.errors</code> view will allow us to easily show validation errors in the same format across all of our pages. Let's define the contents of this view now:</p>
+<pre><code>&lt;!-- resources/views/common/errors.blade.php --&gt;
+
+@if (count($errors) &gt; 0)
+    &lt;!-- Form Error List --&gt;
+    &lt;div class="alert alert-danger"&gt;
+        &lt;strong&gt;Whoops! Something went wrong!&lt;/strong&gt;
+
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;ul&gt;
+            @foreach ($errors-&gt;all() as $error)
+                &lt;li&gt;{{ $error }}&lt;/li&gt;
+            @endforeach
+        &lt;/ul&gt;
+    &lt;/div&gt;
+@endif</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The <code>$errors</code> variable is available in <strong>every</strong> Laravel view. It will simply be an empty instance of <code>ViewErrorBag</code> if no validation errors are present.</p>
+</blockquote>
+<p><a name="creating-the-task"></a></p>
+<h3>Creating The Task</h3>
+<p>Now that input validation is handled, let's actually create a new task by continuing to fill out our route. Once the new task has been created, we will redirect the user back to the <code>/tasks</code> URL. To create the task, we are going to leverage the power of Eloquent's relationships.</p>
+<p>Most of Laravel's relationships expose a <code>create</code> method, which accepts an array of attributes and will automatically set the foreign key value on the related model before storing it in the database. In this case, the <code>create</code> method will automatically set the <code>user_id</code> property of the given task to the ID of the currently authenticated user, which we are accessing using <code>$request-&gt;user()</code>:</p>
+<pre><code>/**
+ * Create a new task.
+ *
+ * @param  Request  $request
+ * @return Response
+ */
+public function store(Request $request)
+{
+    $this-&gt;validate($request, [
+        'name' =&gt; 'required|max:255',
+    ]);
+
+    $request-&gt;user()-&gt;tasks()-&gt;create([
+        'name' =&gt; $request-&gt;name,
+    ]);
+
+    return redirect('/tasks');
+}</code></pre>
+<p>Great! We can now successfully create tasks. Next, let's continue adding to our view by building a list of all existing tasks.</p>
+<p><a name="displaying-existing-tasks"></a></p>
+<h2>Displaying Existing Tasks</h2>
+<p>First, we need to edit our <code><a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="752114061e361a1b01071a19191007351c1b11100d">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></code> method to pass all of the existing tasks to the view. The <code>view</code> function accepts a second argument which is an array of data that will be made available to the view, where each key in the array will become a variable within the view. For example, we could do this:</p>
+<pre><code>/**
+ * Display a list of all of the user's task.
+ *
+ * @param  Request  $request
+ * @return Response
+ */
+public function index(Request $request)
+{
+    $tasks = $request-&gt;user()-&gt;tasks()-&gt;get();
+
+    return view('tasks.index', [
+        'tasks' =&gt; $tasks,
+    ]);
+}</code></pre>
+<p>However, let's explore some of the dependency injection capabilities of Laravel to inject a <code>TaskRepository</code> into our <code>TaskController</code>, which we will use for all of our data access.</p>
+<p><a name="dependency-injection"></a></p>
+<h3>Dependency Injection</h3>
+<p>Laravel's <a href="container.html">service container</a> is one of the most powerful features of the entire framework. After reading this quickstart, be sure to read over all of the container's documentation.</p>
+<h4>Creating The Repository</h4>
+<p>As we mentioned earlier, we want to define a <code>TaskRepository</code> that holds all of our data access logic for the <code>Task</code> model. This will be especially useful if the application grows and you need to share some Eloquent queries across the application.</p>
+<p>So, let's create an <code>app/Repositories</code> directory and add a <code>TaskRepository</code> class. Remember, all Laravel <code>app</code> folders are auto-loaded using the PSR-4 auto-loading standard, so you are free to create as many extra directories as needed:</p>
+<pre><code>&lt;?php
+
+namespace App\Repositories;
+
+use App\User;
+
+class TaskRepository
+{
+    /**
+     * Get all of the tasks for a given user.
+     *
+     * @param  User  $user
+     * @return Collection
+     */
+    public function forUser(User $user)
+    {
+        return $user-&gt;tasks()
+                    -&gt;orderBy('created_at', 'asc')
+                    -&gt;get();
+    }
+}</code></pre>
+<h4>Injecting The Repository</h4>
+<p>Once our repository is defined, we can simply &quot;type-hint&quot; it in the constructor of our <code>TaskController</code> and utilize it within our <code>index</code> route. Since Laravel uses the container to resolve all controllers, our dependencies will automatically be injected into the controller instance:</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Task;
+use App\Http\Requests;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Repositories\TaskRepository;
+
+class TaskController extends Controller
+{
+    /**
+     * The task repository instance.
+     *
+     * @var TaskRepository
+     */
+    protected $tasks;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  TaskRepository  $tasks
+     * @return void
+     */
+    public function __construct(TaskRepository $tasks)
+    {
+        $this-&gt;middleware('auth');
+
+        $this-&gt;tasks = $tasks;
+    }
+
+    /**
+     * Display a list of all of the user's task.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function index(Request $request)
+    {
+        return view('tasks.index', [
+            'tasks' =&gt; $this-&gt;tasks-&gt;forUser($request-&gt;user()),
+        ]);
+    }
+}</code></pre>
+<p><a name="displaying-the-tasks"></a></p>
+<h3>Displaying The Tasks</h3>
+<p>Once the data is passed, we can spin through the tasks in our <code>tasks/index.blade.php</code> view and display them in a table. The <code>@foreach</code> Blade construct allows us to write concise loops that compile down into blazing fast plain PHP code:</p>
+<pre><code>@extends('layouts.app')
+
+@section('content')
+    &lt;!-- Create Task Form... --&gt;
+
+    &lt;!-- Current Tasks --&gt;
+    @if (count($tasks) &gt; 0)
+        &lt;div class="panel panel-default"&gt;
+            &lt;div class="panel-heading"&gt;
+                Current Tasks
+            &lt;/div&gt;
+
+            &lt;div class="panel-body"&gt;
+                &lt;table class="table table-striped task-table"&gt;
+
+                    &lt;!-- Table Headings --&gt;
+                    &lt;thead&gt;
+                        &lt;th&gt;Task&lt;/th&gt;
+                        &lt;th&gt;&amp;nbsp;&lt;/th&gt;
+                    &lt;/thead&gt;
+
+                    &lt;!-- Table Body --&gt;
+                    &lt;tbody&gt;
+                        @foreach ($tasks as $task)
+                            &lt;tr&gt;
+                                &lt;!-- Task Name --&gt;
+                                &lt;td class="table-text"&gt;
+                                    &lt;div&gt;{{ $task-&gt;name }}&lt;/div&gt;
+                                &lt;/td&gt;
+
+                                &lt;td&gt;
+                                    &lt;!-- TODO: Delete Button --&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        @endforeach
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    @endif
+@endsection</code></pre>
+<p>Our task application is almost complete. But, we have no way to delete our existing tasks when they're done. Let's add that next!</p>
+<p><a name="deleting-tasks"></a></p>
+<h2>Deleting Tasks</h2>
+<p><a name="adding-the-delete-button"></a></p>
+<h3>Adding The Delete Button</h3>
+<p>We left a &quot;TODO&quot; note in our code where our delete button is supposed to be. So, let's add a delete button to each row of our task listing within the <code>tasks/index.blade.php</code> view. We'll create a small single-button form for each task in the list. When the button is clicked, a <code>DELETE /task</code> request will be sent to the application which will trigger our <code><a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="075366746c4468697375686b6b6275476362747375687e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></code> method:</p>
+<pre><code>&lt;tr&gt;
+    &lt;!-- Task Name --&gt;
+    &lt;td class="table-text"&gt;
+        &lt;div&gt;{{ $task-&gt;name }}&lt;/div&gt;
+    &lt;/td&gt;
+
+    &lt;!-- Delete Button --&gt;
+    &lt;td&gt;
+        &lt;form action="{{ url('task/'.$task-&gt;id) }}" method="POST"&gt;
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+
+            &lt;button type="submit" id="delete-task-{{ $task-&gt;id }}" class="btn btn-danger"&gt;
+                &lt;i class="fa fa-btn fa-trash"&gt;&lt;/i&gt;Delete
+            &lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+<p><a name="a-note-on-method-spoofing"></a></p>
+<h4>A Note On Method Spoofing</h4>
+<p>Note that the delete button's form <code>method</code> is listed as <code>POST</code>, even though we are responding to the request using a <code>Route::delete</code> route. HTML forms only allow the <code>GET</code> and <code>POST</code> HTTP verbs, so we need a way to spoof a <code>DELETE</code> request from the form.</p>
+<p>We can spoof a <code>DELETE</code> request by outputting the results of the <code>method_field('DELETE')</code> function within our form. This function generates a hidden form input that Laravel recognizes and will use to override the actual HTTP request method. The generated field will look like the following:</p>
+<pre><code>&lt;input type="hidden" name="_method" value="DELETE"&gt;</code></pre>
+<p><a name="route-model-binding"></a></p>
+<h3>Route Model Binding</h3>
+<p>Now, we're almost ready to define the <code>destroy</code> method on our <code>TaskController</code>. But, first, let's revisit our route declaration and controller method for this route:</p>
+<pre><code>Route::delete('/task/{task}', <a class="__cf_email__" href="https://laravel.com/cdn-cgi/l/email-protection" data-cfemail="c0e794a1b3ab83afaeb4b2afacaca5b280a4a5b3b4b2afb9">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>');
+
+/**
+ * Destroy the given task.
+ *
+ * @param  Request  $request
+ * @param  Task  $task
+ * @return Response
+ */
+public function destroy(Request $request, Task $task)
+{
+    //
+}</code></pre>
+<p>Since the <code>{task}</code> variable in our route matches the <code>$task</code> variable defined in our controller method, Laravel's <a href="routing.html#route-model-binding">implicit model binding</a> will automatically inject the corresponding Task model instance.</p>
+<p><a name="authorization"></a></p>
+<h3>Authorization</h3>
+<p>Now, we have a <code>Task</code> instance injected into our <code>destroy</code> method; however, we have no guarantee that the authenticated user actually &quot;owns&quot; the given task. For example, a malicious request could have been concocted in an attempt to delete another user's tasks by passing a random task ID to the <code>/tasks/{task}</code> URL. So, we need to use Laravel's authorization capabilities to make sure the authenticated user actually owns the <code>Task</code> instance that was injected into the route.</p>
+<h4>Creating A Policy</h4>
+<p>Laravel uses &quot;policies&quot; to organize authorization logic into simple, small classes. Typically, each policy corresponds to a model. So, let's create a <code>TaskPolicy</code> using the Artisan CLI, which will place the generated file in <code>app/Policies/TaskPolicy.php</code>:</p>
+<pre><code>php artisan make:policy TaskPolicy</code></pre>
+<p>Next, let's add a <code>destroy</code> method to the policy. This method will receive a <code>User</code> instance and a <code>Task</code> instance. The method should simply check if the user's ID matches the <code>user_id</code> on the task. In fact, all policy methods should either return <code>true</code> or <code>false</code>:</p>
+<pre><code>&lt;?php
+
+namespace App\Policies;
+
+use App\User;
+use App\Task;
+use Illuminate\Auth\Access\HandlesAuthorization;
+
+class TaskPolicy
+{
+    use HandlesAuthorization;
+
+    /**
+     * Determine if the given user can delete the given task.
+     *
+     * @param  User  $user
+     * @param  Task  $task
+     * @return bool
+     */
+    public function destroy(User $user, Task $task)
+    {
+        return $user-&gt;id === $task-&gt;user_id;
+    }
+}</code></pre>
+<p>Finally, we need to associate our <code>Task</code> model with our <code>TaskPolicy</code>. We can do this by adding a line in the <code>app/Providers/AuthServiceProvider.php</code> file's <code>$policies</code> property. This will inform Laravel which policy should be used whenever we try to authorize an action on a <code>Task</code> instance:</p>
+<pre><code>/**
+ * The policy mappings for the application.
+ *
+ * @var array
+ */
+protected $policies = [
+    'App\Task' =&gt; 'App\Policies\TaskPolicy',
+];</code></pre>
+<h4>Authorizing The Action</h4>
+<p>Now that our policy is written, let's use it in our <code>destroy</code> method. All Laravel controllers may call an <code>authorize</code> method, which is exposed by the <code>AuthorizesRequest</code> trait:</p>
+<pre><code>/**
+ * Destroy the given task.
+ *
+ * @param  Request  $request
+ * @param  Task  $task
+ * @return Response
+ */
+public function destroy(Request $request, Task $task)
+{
+    $this-&gt;authorize('destroy', $task);
+
+    // Delete The Task...
+}</code></pre>
+<p>Let's examine this method call for a moment. The first argument passed to the <code>authorize</code> method is the name of the policy method we wish to call. The second argument is the model instance that is our current concern. Remember, we recently told Laravel that our <code>Task</code> model corresponds to our <code>TaskPolicy</code>, so the framework knows on which policy to fire the <code>destroy</code> method. The current user will automatically be sent to the policy method, so we do not need to manually pass it here.</p>
+<p>If the action is authorized, our code will continue executing normally. However, if the action is not authorized (meaning the policy's <code>destroy</code> method returned <code>false</code>), a 403 exception will be thrown and an error page will be displayed to the user.</p>
+<blockquote>
+<p><strong>Note:</strong> There are several other ways to interact with the authorization services Laravel provides. Be sure to browse the complete <a href="authorization.html">authorization documentation</a>.</p>
+</blockquote>
+<p><a name="deleting-the-task"></a></p>
+<h3>Deleting The Task</h3>
+<p>Finally, let's finish adding the logic to our <code>destroy</code> method to actually delete the given task. We can use Eloquent's <code>delete</code> method to delete the given model instance in the database. Once the record is deleted, we will redirect the user back to the <code>/tasks</code> URL:</p>
+<pre><code>/**
+ * Destroy the given task.
+ *
+ * @param  Request  $request
+ * @param  Task  $task
+ * @return Response
+ */
+public function destroy(Request $request, Task $task)
+{
+    $this-&gt;authorize('destroy', $task);
+
+    $task-&gt;delete();
+
+    return redirect('/tasks');
+}</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="https://laravel.com/docs">Documentation</a></li>
+<li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
+<li class="nav-spark"><a href="https://spark.laravel.com">Spark</a></li>
+<li class="nav-lumen"><a href="https://lumen.laravel.com">Lumen</a></li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
+		<li class="nav-envoyer"><a href="https://envoyer.io">Envoyer</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Conference <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="http://laracon.us">Laracon US</a></li>
+		<li><a href="http://laracon.eu">Laracon EU</a></li>
+	</ul>
+</li>
+
+<li class="dropdown community-dropdown">
+	<a href="quickstart-intermediate.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+	<ul class="dropdown-menu" role="menu">
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
+		<li class="divider"></li>
+		<li><a href="http://blog.laravel.com">Laravel Blog</a></li>
+		<li class="divider"></li>
+		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
+		<li><a href="https://laracasts.com/discuss">Forums</a></li>
+		<li><a href="https://laravel-news.com/">Newsletter</a></li>
+		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="http://larachat.co">Slack</a></li>
+		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
+	</ul>
+</li>
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+	</footer>
+
+		<script>
+		var algolia_app_id      = '8BB87I11DE';
+		var algolia_search_key  = '8e1d446d61fce359f69cd7c8b86a50de';
+		var version             = '5.2';
+	</script>
+
+		<script id="search_suggestion_template" type="text/template">
+	<div class="autocomplete-wrapper">
+		{{#_highlightResult.h1}}
+		<div class="h1">
+			{{{ _highlightResult.h1.value }}}
+		</div>
+		{{/_highlightResult.h1}}
+
+		<div class="sub-section">
+			{{#_highlightResult.h2}}
+			<div class="h2">
+				<span class="hash">#</span> {{{ _highlightResult.h2.value }}}
+			</div>
+			{{/_highlightResult.h2}}
+
+			{{#_highlightResult.h3}}
+			<div class="h3">
+				> {{{ _highlightResult.h3.value }}}
+			</div>
+			{{/_highlightResult.h3}}
+
+			{{#_highlightResult.h4}}
+			<div class="h4">
+				> {{{ _highlightResult.h4.value }}}
+			</div>
+			{{/_highlightResult.h4}}
+		</div>
+
+		{{#_highlightResult.content}}
+		<div class="content">
+			{{{ _highlightResult.content.value }}}
+		</div>
+		{{/_highlightResult.content}}
+	</div>
+</script>
+
+<script id="search_empty_template" type="text/template">
+	<div class="autocomplete-wrapper empty">
+		<div class="h2">We didn't find any result for "{{query}}". Sorry!</div>
+	</div>
+</script>
+
+<script id="search_footer_template" type="text/template">
+	<div class="footer">
+		<a target="_blank" href="http://www.algolia.com/?utm_source=lavarel&utm_medium=link&utm_campaign=lavarel_documentation_search">
+			<img width="50" src="../../assets/img/algolia-logo.png">
+			<div class="powered">powered by</div>
+			<div style="clear: both"></div>
+		</a>
+	</div>
+</script>	
+	<script src="../../build/assets/js/laravel-02364550.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+	<script>
+		var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
+		(function(d,t){
+			var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)
+		}(document,'script'));
+	</script>
+</body>
+</html>
