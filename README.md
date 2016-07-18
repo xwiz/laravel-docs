@@ -1,5 +1,8 @@
 laravel-docs
 ============
 
-Laravel 4.1 with default components and offline documentation
+Laravel Complete Offline Documentation
+==
+
+ - Supports - Laravel 5.2, 4.2 and 4.1
  - Access documentation by visiting yourappurl/laravel.com
